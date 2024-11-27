@@ -1,0 +1,76 @@
+/* Navbar Wrapper (wraps all navbar content) */
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;          /* Position it at the very top */
+  left: 0;         /* Align it to the left */
+  right: 0;        /* Align it to the right */
+  z-index: 10;     /* Ensure it stays above other content */
+  padding: 10px 20px;  /* Optional: Add padding to give some space */
+}
+
+/* Container for the whole Navbar */
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center everything vertically */
+}
+
+/* Logo container styles */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align logo at the top */
+  width: 76.17px; /* Set size for logo container */
+  height: 52.82px;
+}
+
+/* Menu container and items */
+.menu-container {
+  justify-content: center;
+  align-items: center; /* Align menu items vertically to the middle */
+  gap: 24px;
+  display: flex;
+  height: 60px; /* Same height as the sign-in button to center them */
+}
+
+.menu-items {
+  justify-content: center;
+  align-items: center; /* Ensure menu items are vertically centered */
+  gap: 37px;
+  display: flex;
+}
+
+.menu-item {
+  color: #FDFDFC;
+  font-size: 16px;
+  font-family: 'DINNextLTPro-Medium', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2.24px;
+  word-wrap: break-word;
+}
+
+/* Sign-in button styles */
+.signin-button {
+  width: 155.12px;
+  height: 60px;
+  background: white;
+  border-radius: 29.268px;
+  border: 7.32px solid #31121A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-text {
+  color: black;
+  font-size: 22.11px;
+  font-family: 'DINNextLTPro-Medium', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}

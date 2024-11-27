@@ -1,0 +1,539 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'DINNextLTPro';
+  line-height: 1.6;
+  color: #fff;
+  background-color: #0D0C12;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+}
+
+/* Home Page */
+.home {
+  width: 100%;
+}
+
+/* ===================== */
+/* Hero Section */
+/* ===================== */
+.hero {
+  position: relative;
+  background: url('../../Assets/jungleart.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.hero-overlay {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+/* Hero Content - Limited to 80% */
+.hero-content {
+  text-align: left;
+  width: 80%; /* Adjusted to 80% of the screen width */
+  max-width: 1000px; /* Optional max-width to limit large screens */
+  margin: 0 auto;
+  margin-bottom: 20px; /* Reduce this value */
+}
+
+
+.hero-title {
+  color: #ffffff;
+  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 4rem;
+}
+
+.hero-highlight {
+  color: #ffffff;
+  font-family: 'DINNextLTPro-Black', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 4rem;
+}
+
+/* Search Bar Styling */
+
+.search-bar {
+  position: relative;
+  width: auto; 
+  max-width: 1161px; 
+  margin: 40px auto; 
+  padding: 13px 45px;
+  background: #0D0C12;
+  box-shadow: 0px 0px 98px 16px #b83a4d;
+  border-radius: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add animation to the pulsating gradient border */
+@keyframes pulseGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.search-bar::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: conic-gradient(
+    from 211deg,
+    #0073ff 0deg, 
+    #ff7300 45deg,  
+    #04b8ff 90deg,
+    #ffc60a 135deg,
+    #a856ff 180deg,
+    #1dff6c 225deg,
+    #ff5f0e 270deg,
+    #7300ff 360deg  /* Hot Pink */
+  );
+  background-size: 200% 200%; /* Make the gradient larger for smooth animation */
+  animation: pulseGradient 2.5s ease infinite; /* Apply the animation */
+  border-radius: 35px;
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
+
+
+.search-container {
+  width: 1161px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.search-category span {
+  color: #F0555B;
+  font-size: 36.81px;
+  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-weight: 300;
+}
+
+.search-gradient {
+  width: 20px;
+  height: 11px;
+  background: conic-gradient(
+    from 211deg at 31.38% 122.71%,
+    #F0555B 0deg,
+    #F0555D 59deg,
+    #F0625D 142deg,
+    #F28B78 212deg,
+    #F26E66 296deg,
+    #F26567 360deg
+  );
+}
+
+.search-icon-container {
+  width: 70.62px;
+  height: 69.61px;
+  background: #5A1720;
+  border-radius: 10.09px;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-icon {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  left: 16.12px;
+  top: 18.81px;
+}
+
+.search-input {
+  margin-left: 5px;
+  padding: 8px 12px;
+  font-size: 36.81px;
+  width: 600px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  outline: none; 
+}
+
+.search-input:focus {
+  border: none; 
+  outline: none;
+}
+
+/* ===================== */
+/* Trending Searches Section (Updated) */
+/* ===================== */
+.trending-searches {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px; /* Space between text and tags */
+  padding: 10px 0 20px 0; /* Reduced top padding */
+}
+
+.trending-searches-header {
+  color: white;
+  font-size: 24px;
+  font-family: 'DIN Next LT Pro', sans-serif;
+  font-weight: 400;
+  margin-right: 20px; /* Space between header and tags */
+}
+
+.tags-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 6px 12px; /* Smaller padding for tags */
+  border-radius: 16px; /* Slightly smaller radius */
+  border: 4px solid; /* Reduced border thickness */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag-text {
+  color: white;
+  font-size: 18px; /* Smaller font size */
+  font-family: 'DIN Next LT Pro', sans-serif;
+  font-weight: 400;
+}
+
+/* Banner */
+
+.banner-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if the height is defined */
+  margin-top: 20px; /* Optional: Add spacing above the banner */
+}
+
+.banner {
+  max-width: 80%; /* Ensure it scales responsively */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Section for Tribox content */
+.tribox-container {
+  display: flex;
+  justify-content: space-between; /* Space out content and image */
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: row-reverse; /* Keep image on the right */
+  padding: 0 20px; /* Add padding to prevent overflow */
+}
+
+.tribox-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Maintain gap */
+  padding: 20px; /* Ensure padding prevents content from touching the edges */
+  color: white;
+  max-width: 600px; /* Limit width to fit the screen */
+}
+
+.tribox-header {
+  font-family: 'DINNextLTPro-Bold', sans-serif;
+  font-weight: 300;
+  font-size: 60px; /* Reduced font size */
+  text-align: left;
+}
+
+.tribox-title {
+  color: white;
+}
+
+.tribox-highlight {
+  color: #ED254E;
+  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-size: 60px; /* Reduced font size */
+  font-weight: 900;
+}
+
+.tribox-description {
+  width: 100%; /* Allow responsive width */
+  max-width: 500px; /* Limit maximum width for a more compact layout */
+  font-size: 16px; /* Slightly smaller font size */
+  line-height: 24px; /* Adjusted line height for better text density */
+  font-family: 'DINNextLTPro-Regular', sans-serif;
+  font-weight: 300;
+  text-align: left;
+  margin: 0 auto; /* Center it within its container */
+}
+
+.tribox-button {
+  width: 160px; /* Reduced width */
+  height: 50px; /* Reduced height */
+  background: white;
+  border-radius: 29.27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px; /* Reduced padding */
+}
+
+.tribox-button-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap between icon and text */
+}
+
+.tribox-button-icon {
+  width: 20px; /* Reduced icon size */
+  height: 20px; /* Reduced icon size */
+  background-color: transparent; /* Make the icon background transparent */
+}
+
+.tribox-button-text {
+  font-size: 18px;
+  font-weight: 200; /* Light font weight */
+  color: black; /* Light color for the button text */
+  text-align: center;
+  font-family: 'DINNextLTPro-Light', sans-serif;
+}
+
+.tribox-image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin-top: 20px;
+}
+
+.tribox-image {
+  width: 100%; /* Responsive width */
+  max-width: 700px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Avoid cropping the image */
+  margin-left: 10px; /* Add spacing */
+}
+
+.tribox-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Reduced gap between elements */
+  padding: 40px;
+  color: white;
+}
+
+/* ===================== */
+/* Infinite Scroll Animation */
+/* ===================== */
+
+/* Infinite Scroll Container */
+.infinite-scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.infinite-scroll-container2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.loop-slider {
+  display: flex;
+  width: 100%;
+  animation: scroll 20s linear infinite; /* Adjust speed as necessary */
+}
+
+.inner {
+  display: flex;
+  min-width: 100%; /* Make sure it takes the full width of the container */
+}
+
+.scroll-image {
+  width: 119px; /* Set image width to make them smaller */
+  height: auto;
+  margin-right: 15px; /* Adjust margin to maintain spacing between images */
+  object-fit: contain;
+}
+
+/* Keyframes for left-to-right scrolling (default) */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start at the first image */
+  }
+  100% {
+    transform: translateX(-100%); /* Move by one full image width */
+  }
+}
+
+/* Adjust for right-to-left scrolling on the second carousel */
+.second-carousel .loop-slider {
+  animation: scroll-right-to-left 20s linear infinite;
+}
+
+/* Keyframes for right-to-left scrolling */
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0); /* Start at the first image */
+  }
+  100% {
+    transform: translateX(100%); /* Move by one full image width in reverse direction */
+  }
+}
+
+/* Duplicate the images */
+.loop-slider {
+  display: flex;
+}
+
+.inner {
+  display: flex;
+}
+
+.inner img {
+  width: 119px; /* Ensure the images are smaller */
+}
+
+/* Featured Works Title */
+.featured-works-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.featured-works-title {
+  font-family: 'DINLTPRO', sans-serif; /* Ensure you have this font loaded or linked */
+  font-size: 3rem;
+  font-weight: bold;
+  background: conic-gradient(from 211deg at 50.06% 49.94%, #F0555B 0deg, #F0555D 59.35019910335541deg, #F0625D 141.91789984703064deg, #F28B78 211.50091409683228deg, #F26E66 295.87376832962036deg, #F26567 360deg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+/* Menu Section */
+.menu-container {
+  margin-bottom: 80px; /* Add some margin between menu and work cards */
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menu-item {
+  font-family: 'DINLTPRO', sans-serif; /* Ensure you have this font loaded or linked */
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff; /* Default color for items */
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.menu-item:hover:before {
+  width: 120%;
+  height: 120%;
+  background-color: currentColor; /* Uses the current color of the item */
+  opacity: 0.3; /* Slight opacity for the pulsating circle */
+}
+
+/* Hover Color Changes */
+.menu-item:nth-child(1):hover {
+  color: #ED254E; /* 3D Models */
+}
+
+.menu-item:nth-child(2):hover {
+  color: #FFBE0B; /* Mockups */
+}
+
+.menu-item:nth-child(3):hover {
+  color: #A0ECD0; /* Templates */
+}
+
+.menu-item:nth-child(4):hover {
+  color: #6610F2; /* Audio Samples */
+}
+
+.menu-item:nth-child(5):hover {
+  color: #E5C1BD; /* Photos */
+}
+
+.menu-item:nth-child(6):hover {
+  color: #9ED0E6; /* Presentation Templates */
+}
+
+.menu-item:nth-child(7):hover {
+  color: #61E294; /* Fonts */
+}
+
+/* Footer Section */
+.footer {
+  background-color: #000;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+
+/* PHONE RESPONSIVE SECTION */
+
+@media (max-width: 768px) {
+  .tribox-description {
+    max-width: 90%; /* Use a percentage for smaller screens */
+    font-size: 14px; /* Reduce font size */
+    line-height: 20px; /* Tighten line height */
+    text-align: center; /* Center-align for better readability on narrow screens */
+  }
+}

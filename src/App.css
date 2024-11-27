@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'DINNextLTPro';
+  src: url('../src/Assets/fonts/DINNextRoundedLTPro-Regular.ttf') format('truetype');
+  src:url('../src//Assets/fonts/DINNextLTPro-BlackCondensed.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .App {
   text-align: center;
 }

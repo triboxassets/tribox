@@ -1,0 +1,21 @@
+.snow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  background-color: white;
+  /* Remove border-radius to make snowflakes square */
+  animation: snowfall 10s linear infinite;
+}
+
+@keyframes snowfall {
+  0% { transform: translateY(-10px); }
+  100% { transform: translateY(100vh); }
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "id": "1",
+    "title": "Ukiyo-e Art",
+    "descriptionHtml": "<p>A beautiful collection of traditional Ukiyo-e art pieces.</p>",
+    "featuredImage": {
+      "src": "/assets/ukiyoe.png",
+      "altText": "Ukiyo-e Art"
+    },
+    "productType": "Photos",
+    "metafields": [
+      { "key": "rating", "value": "4.8" },
+      { "key": "upload_date", "value": "2024-08-01" },
+      { "key": "file_format", "value": "JPG" },
+      { "key": "author", "value": "Hokusai" }
+    ],
+    "tags": ["art", "traditional", "Japanese"]
+  },
+  {
+    "id": "2",
+    "title": "3D Car Model",
+    "descriptionHtml": "<p>Realistic 3D model of a car, ready for animation or rendering.</p>",
+    "featuredImage": {
+      "src": "/assets/scene.gltf",
+      "altText": "3D Car Model"
+    },
+    "productType": "3D Models",
+    "metafields": [
+      { "key": "rating", "value": "4.9" },
+      { "key": "upload_date", "value": "2024-07-15" },
+      { "key": "file_format", "value": "GLTF" },
+      { "key": "author", "value": "AutoDesign Studio" }
+    ],
+    "tags": ["3D", "model", "car"]
+  },
+  {
+    "id": "3",
+    "title": "Business Presentation Template",
+    "descriptionHtml": "<p>Professional template for creating business presentations in PowerPoint.</p>",
+    "featuredImage": {
+      "src": "/assets/Monitor.png",
+      "altText": "Business Presentation Template"
+    },
+    "productType": "Template",
+    "metafields": [
+      { "key": "rating", "value": "4.2" },
+      { "key": "upload_date", "value": "2024-06-20" },
+      { "key": "file_format", "value": "PPTX" },
+      { "key": "author", "value": "TemplateMasters" }
+    ],
+    "tags": ["business", "presentation", "template"]
+  },
+  {
+    "id": "4",
+    "title": "Mockup Set",
+    "descriptionHtml": "<p>A set of photorealistic mockups for showcasing branding designs.</p>",
+    "featuredImage": {
+      "src": "/assets/screenmockup.png",
+      "altText": "Mockup Set"
+    },
+    "productType": "Mockups",
+    "metafields": [
+      { "key": "rating", "value": "4.7" },
+      { "key": "upload_date", "value": "2024-05-30" },
+      { "key": "file_format", "value": "PSD" },
+      { "key": "author", "value": "MockupPro" }
+    ],
+    "tags": ["mockup", "branding", "design"]
+  },
+  {
+    "id": "5",
+    "title": "Photography Portfolio",
+    "descriptionHtml": "<p>A stunning portfolio showcasing a wide range of photography styles.</p>",
+    "featuredImage": {
+      "src": "/assets/pillar.png",
+      "altText": "Photography Portfolio"
+    },
+    "productType": "Photos",
+    "metafields": [
+      { "key": "rating", "value": "5.0" },
+      { "key": "upload_date", "value": "2024-04-10" },
+      { "key": "file_format", "value": "PNG" },
+      { "key": "author", "value": "Jane Doe" }
+    ],
+    "tags": ["photography", "portfolio", "art"]
+  },
+  {
+    "id": "6",
+    "title": "Business Branding Mockup",
+    "descriptionHtml": "<p>Realistic branding mockup for presenting logos and branding designs.</p>",
+    "featuredImage": {
+      "src": "/assets/pillar.png",
+      "altText": "Business Branding Mockup"
+    },
+    "productType": "Mockups",
+    "metafields": [
+      { "key": "rating", "value": "4.6" },
+      { "key": "upload_date", "value": "2024-05-05" },
+      { "key": "file_format", "value": "PSD" },
+      { "key": "author", "value": "DesignWorks" }
+    ],
+    "tags": ["branding", "mockup", "business"]
+  },
+  {
+    "id": "7",
+    "title": "Abstract Spiral Art",
+    "descriptionHtml": "<p>Mesmerizing abstract art in spiral patterns, perfect for home decor.</p>",
+    "featuredImage": {
+      "src": "/assets/spiral.png",
+      "altText": "Abstract Spiral Art"
+    },
+    "productType": "Template",
+    "metafields": [
+      { "key": "rating", "value": "4.4" },
+      { "key": "upload_date", "value": "2024-03-12" },
+      { "key": "file_format", "value": "PNG" },
+      { "key": "author", "value": "AbstractVision" }
+    ],
+    "tags": ["art", "abstract", "spiral"]
+  },
+  {
+    "id": "8",
+    "title": "Young Priestess",
+    "descriptionHtml": "<p>A highly detailed 3D model of a vintage clock, ready for rendering.</p>",
+    "featuredImage": {
+      "src": "/assets/blue/scene.gltf",
+      "altText": "Young Priestess"
+    },
+    "productType": "3D Models",
+    "metafields": [
+      { "key": "rating", "value": "5.0" },
+      { "key": "upload_date", "value": "2024-02-28" },
+      { "key": "file_format", "value": "GLTF" },
+      { "key": "author", "value": "ClockWorks Studio" }
+    ],
+    "tags": ["3D", "model", "clock"]
+  },
+  {
+    "id": "9",
+    "title": "Elara Font",
+    "descriptionHtml": "<p>A sleek and modern font designed for digital and print media.</p>",
+    "featuredImage": {
+      "src": "/assets/Elara.png",
+      "altText": "Elara Font"
+    },
+    "productType": "Fonts",
+    "metafields": [
+      { "key": "rating", "value": "4.9" },
+      { "key": "upload_date", "value": "2024-01-20" },
+      { "key": "file_format", "value": "OTF" },
+      { "key": "author", "value": "FontSmiths" }
+    ],
+    "tags": ["font", "modern", "typography"]
+  }
+]

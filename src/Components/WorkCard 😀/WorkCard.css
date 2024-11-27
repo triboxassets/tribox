@@ -1,0 +1,145 @@
+.work-card {
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 350px;
+  height: auto;
+  text-align: left;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Hover styles for card-wide interactions */
+.work-card:hover .work-card-meta,
+.work-card:hover .work-card-meta span,
+.work-card:hover .work-card-title,
+.work-card:hover .work-card-description {
+  color: var(--accent-color);
+}
+
+.work-card:hover .work-card-button {
+  background-color: var(--accent-color);
+  color: black;
+}
+
+/* Image styles */
+.work-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Meta information */
+.work-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.work-card-meta p {
+  margin: 2px 0;
+}
+
+.work-card-meta strong,
+.work-card-meta span {
+  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.work-card-meta strong {
+  font-weight: 700;
+}
+
+.work-card-meta span {
+  font-weight: 200;
+}
+
+/* Title styles */
+.work-card-title {
+  font-family: 'DINNextLTPro-Bold', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  margin-top: 2px;
+  width: 100%;
+  word-wrap: break-word;
+  transition: color 0.3s ease;
+
+  /* Truncate after two lines */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Description styles */
+.work-card-description {
+  font-size: 12px;
+  color: white;
+  font-family: 'DINNextLTPro-Light', sans-serif;
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Button styles */
+.work-card-button {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rating-badge {
+  background-color: var(--accent-color);
+  color: black;
+  font-family: 'DINNextLTPro-Light', sans-serif;
+  border-radius: 5px;
+  padding: 2px 6px; /* Reduced padding for a smaller appearance */
+  font-size: 12px; /* Smaller font size */
+  font-weight: 700;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  max-width: 60px; /* Optional: limits horizontal length */
+  overflow: hidden; /* Ensures content doesn't overflow */
+  text-overflow: ellipsis; /* Adds "..." if text is too long */
+  transition: background-color 0.3s;
+}
+
+
+/* Tag styles */
+.work-card-tags {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--accent-color);
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.work-card-tag {
+  background-color: var(--accent-color);
+  color: black;
+  padding: 2px 5px;
+  font-family: 'DINNextLTPro', sans-serif;
+  border-radius: 14px;
+  font-size: 8px;
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.work-card-tag:hover {
+  background-color: var(--accent-color);
+  color: black;
+}
