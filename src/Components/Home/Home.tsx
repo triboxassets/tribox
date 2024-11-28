@@ -11,6 +11,9 @@ import Triboxgreen from '../../Assets/Triboxgreen.png';
 import dummyhomecollection from '../../dummyhomecollection.json';
 import './Home.css';
 
+// Importing Unicons
+import { UilCube, UilImages, UilFile, UilMusic, UilCamera, Uil0Plus, UilFont } from '@iconscout/react-unicons';
+
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -143,13 +146,34 @@ const Home = () => {
 
       <div className="menu-container">
         <ul className="menu">
-          <li className="menu-item">3D Models</li>
-          <li className="menu-item">Mockups</li>
-          <li className="menu-item">Templates</li>
-          <li className="menu-item">Audio Samples</li>
-          <li className="menu-item">Photos</li>
-          <li className="menu-item">Presentation Templates</li>
-          <li className="menu-item">Fonts</li>
+          <li className="menu-item">
+            <UilCube className="menu-icon" />
+            3D Models
+          </li>
+          <li className="menu-item">
+            <UilImages className="menu-icon" />
+            Mockups
+          </li>
+          <li className="menu-item">
+            <UilFile className="menu-icon" />
+            Templates
+          </li>
+          <li className="menu-item">
+            <UilMusic className="menu-icon" />
+            Audio Samples
+          </li>
+          <li className="menu-item">
+            <UilCamera className="menu-icon" />
+            Photos
+          </li>
+          <li className="menu-item">
+            <Uil0Plus className="menu-icon" />
+            Presentation Templates
+          </li>
+          <li className="menu-item">
+            <UilFont className="menu-icon" />
+            Fonts
+          </li>
         </ul>
       </div>
 

@@ -8,10 +8,10 @@ const Navbar: React.FC<{ isScrolled: boolean }> = ({ isScrolled }) => (
       <div className="logo-container">
         <TriboxLogo />
       </div>
-      <div className="menu-container">
-        <div className="menu-items">
+      <div className="header-menu-container">
+        <div className="header-menu-items">
           {['Store', 'Destroy My Design', 'About', 'Artists'].map((text) => (
-            <div key={text} className="menu-item">
+            <div key={text} className="header-menu-item">
               {text}
             </div>
           ))}

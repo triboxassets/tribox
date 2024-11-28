@@ -47,8 +47,13 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
     // Set up 3D scene
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    const containerWidth = 300; // Match the image container width
+    const containerHeight = 200; // Match the image container height
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(500, 500);
+    renderer.setSize(containerWidth, containerHeight);
+
+    camera.aspect = containerWidth / containerHeight;
+    camera.updateProjectionMatrix();
   
     // Create a gradient background
     const canvas = document.createElement('canvas');
@@ -167,28 +172,29 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
       className="work-card"
       style={{ '--accent-color': accentColor } as React.CSSProperties}
     >
-      {productType === '3D Models' ? (
-        <div
-          ref={modelContainerRef}
-          className="work-card-image 3d-model-container"
-          style={{ width: '100%', height: '300px', backgroundColor: '#f0f0f0', overflow: 'hidden' }}
-          onMouseMove={handleMouseMove}
-        >
-          {images.length > 0 && (
-            <img
-              src={images[currentImageIndex]}
-              alt="3D Model Preview"
-              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-            />
-          )}
-        </div>
-      ) : (
-        <img
-          className="work-card-image"
-          src={productData?.featuredImage?.src}
-          alt={productData?.featuredImage?.altText}
-        />
-      )}
+      <div className="work-card-image-container">
+        {productType === '3D Models' ? (
+          <div
+            ref={modelContainerRef}
+            className="work-card-image"
+            onMouseMove={handleMouseMove}
+          >
+            {images.length > 0 && (
+              <img
+                src={images[currentImageIndex]}
+                alt="3D Model Preview"
+                className="preview-image"
+              />
+            )}
+          </div>
+        ) : (
+          <img
+            className="work-card-image"
+            src={productData?.featuredImage?.src}
+            alt={productData?.featuredImage?.altText}
+          />
+        )}
+      </div>
 
       <div className="rating-badge">
         <FontAwesomeIcon icon={faStar} className="star-icon" /> {rating}

@@ -439,50 +439,89 @@ button {
 /* Featured Works Title */
 .featured-works-container {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .featured-works-title {
-  font-family: 'DINLTPRO', sans-serif; /* Ensure you have this font loaded or linked */
+  font-family: 'DINNextLTPro-Light', sans-serif;
   font-size: 3rem;
-  font-weight: bold;
-  background: conic-gradient(from 211deg at 50.06% 49.94%, #F0555B 0deg, #F0555D 59.35019910335541deg, #F0625D 141.91789984703064deg, #F28B78 211.50091409683228deg, #F26E66 295.87376832962036deg, #F26567 360deg);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff; /* Set the text color to white */
   display: inline-block;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
+
 
 /* Menu Section */
 .menu-container {
-  margin-bottom: 80px; /* Add some margin between menu and work cards */
+  text-align: center;
+  margin-top: 60px;
 }
 
 .menu {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap; /* Allows items to wrap */
+  justify-content: center; /* Center items */
+  padding: 0;
+  gap: 20px; /* Space between cards */
 }
 
 .menu-item {
-  font-family: 'DINLTPRO', sans-serif; /* Ensure you have this font loaded or linked */
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff; /* Default color for items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* Background for the card */
+  color: #fff;
+  font-size: 16.8px; /* Slightly larger font */
+  font-family: 'DINNextLTPro-Light', sans-serif;
+  border-radius: 15px; /* Rounded corners */
+  width: 150px; /* Fixed width for cards */
+  padding: 10px 8px; /* Padding for inner spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  position: relative;
+  text-align: center; /* Ensure text is centered */
+  
+  /* Prevent text wrapping and overflow */
+  white-space: nowrap; /* Prevent text from breaking into multiple lines */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Truncate long text with ellipsis */
+  height: auto; /* Allow height to adjust based on content */
+}
+
+/* Specific Target for Presentation Template */
+.menu-item:nth-child(6) {
+  /* For Presentation Template card, adjust width or allow text to fit */
+  width: auto; /* Let the width expand based on the text */
+  max-width: 200px; /* Set a max-width to prevent it from getting too large */
+  text-overflow: unset; /* Remove ellipsis for this specific item */
+  white-space: normal; /* Allow wrapping for this specific item */
+  padding: 10px 12px; /* Adjust padding to accommodate longer text */
+}
+
+/* Icon Styling */
+.menu-icon {
+  font-size: 42px;
+  margin-bottom: 12px; /* Reduce gap between icon and text */
   transition: color 0.3s ease;
 }
 
 /* Hover Effects */
+.menu-item:hover {
+  transform: scale(1.1); /* Slightly grow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
 .menu-item:hover:before {
-  width: 120%;
-  height: 120%;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
   background-color: currentColor; /* Uses the current color of the item */
-  opacity: 0.3; /* Slight opacity for the pulsating circle */
+  opacity: 0.2; /* Subtle overlay effect */
+  z-index: -1; /* Ensures it stays behind content */
 }
 
 /* Hover Color Changes */
@@ -514,18 +553,14 @@ button {
   color: #61E294; /* Fonts */
 }
 
-/* Footer Section */
-.footer {
-  background-color: #000;
-  padding: 40px 20px;
-  text-align: center;
-}
 
-.footer p {
-  font-size: 0.8rem;
-  color: #aaa;
+.work-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  justify-items: center;
 }
-
 
 /* PHONE RESPONSIVE SECTION */
 
