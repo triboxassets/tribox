@@ -43,83 +43,58 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
 
   const generateImages = (modelUrl: string) => {
     if (!modelContainerRef.current) return;
-  
+
     // Set up 3D scene
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(500, 500);
-  
-    // Create a gradient background
+    renderer.setSize(300, 300);
+
+    // Append renderer to an offscreen canvas
     const canvas = document.createElement('canvas');
-    canvas.width = 256;
-    canvas.height = 256;
-    const ctx = canvas.getContext('2d');
-    if (ctx) {
-      const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-      gradient.addColorStop(0, 'lightgrey');
-      gradient.addColorStop(1, 'white');
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
-    const gradientTexture = new THREE.CanvasTexture(canvas);
-    scene.background = gradientTexture;
-  
+    renderer.setSize(300, 300, false);
+
     // Add light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
     const pointLight = new THREE.PointLight(0xffffff, 1);
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
-  
+
     // Load the model
     const loader = new GLTFLoader();
     loader.load(
       modelUrl,
       (gltf) => {
         const model = gltf.scene;
+        model.scale.set(1, 1, 1);
         scene.add(model);
-  
-        // Compute the bounding box and sphere
-        const box = new THREE.Box3().setFromObject(model);
-        const size = box.getSize(new THREE.Vector3());
-        const center = box.getCenter(new THREE.Vector3());
-        const boundingSphere = box.getBoundingSphere(new THREE.Sphere());
-  
+
         // Center the model
+        const box = new THREE.Box3().setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
         model.position.sub(center);
-  
-        // Determine the optimal camera distance
-        const aspect = renderer.domElement.clientWidth / renderer.domElement.clientHeight;
-        const maxDim = Math.max(size.x, size.y, size.z);
-        const distance = maxDim / (2 * Math.tan((Math.PI / 180) * camera.fov / 2));
-  
-        // Ensure the model fits the frustum
-        const fitOffset = 1.5; // Extra space around the model
-        const adjustedDistance = distance * fitOffset;
-  
-        camera.position.set(0, size.y * 0.5, adjustedDistance);
-        camera.lookAt(0, 0, 0);
-  
-        // Generate images from different angles
+
+        // Create images from different angles
         const snapshots: string[] = [];
         const totalAngles = 36; // Number of angles to capture
-  
+        const radius = 5;
+
         for (let i = 0; i < totalAngles; i++) {
           const angle = (i / totalAngles) * Math.PI * 2;
           camera.position.set(
-            Math.cos(angle) * adjustedDistance,
-            size.y * 0.5, // Slightly above the center
-            Math.sin(angle) * adjustedDistance
+            Math.cos(angle) * radius,
+            2,
+            Math.sin(angle) * radius
           );
           camera.lookAt(0, 0, 0);
           renderer.render(scene, camera);
-  
+
           // Convert the current frame to a data URL
           const dataUrl = renderer.domElement.toDataURL();
           snapshots.push(dataUrl);
         }
-  
+
         setImages(snapshots);
       },
       undefined,
@@ -128,7 +103,6 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
       }
     );
   };
-  
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!modelContainerRef.current || images.length === 0) return;

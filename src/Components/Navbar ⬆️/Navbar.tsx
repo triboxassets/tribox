@@ -1,9 +1,9 @@
 import React from 'react';
-import { ReactComponent as TriboxLogo } from '../../Assets/whitelogo.svg'
+import { ReactComponent as TriboxLogo } from '../../Assets/whitelogo.svg';
 import './Navbar.css';
 
-const Navbar: React.FC = () => (
-  <div className="navbar-wrapper"> 
+const Navbar: React.FC<{ isScrolled: boolean }> = ({ isScrolled }) => (
+  <div className={`navbar-wrapper ${isScrolled ? 'navbar-scrolled' : ''}`}>
     <div className="navbar-container">
       <div className="logo-container">
         <TriboxLogo />

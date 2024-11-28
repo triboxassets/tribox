@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar ⬆️/Navbar.tsx';
 import Snowflakes from '../Snowflakes ❄️/Snowflakes.tsx';
 import WorkCard from '../WorkCard 😀/WorkCard.tsx';
@@ -11,16 +11,29 @@ import dummyhomecollection from '../../dummyhomecollection.json';
 import './Home.css';
 
 const Home = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 100); // Adjust the threshold as needed
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const productIds = dummyhomecollection.map((product) => product.id);
 
   const works = [
     { imageSrc: require('../../Assets/car1.png'), title: 'Car 1', description: 'Description of Car 1', buttonText: 'View Details' },
     { imageSrc: require('../../Assets/car2.png'), title: 'Car 2', description: 'Description of Car 2', buttonText: 'View Details' },
     { imageSrc: require('../../Assets/car3.png'), title: 'Car 3', description: 'Description of Car 3', buttonText: 'View Details' },
-    { imageSrc: require('../../Assets/car4.png'), title: 'Car 4', description: 'Description of Car 4', buttonText: 'View Details' },
-    { imageSrc: require('../../Assets/car5.png'), title: 'Car 5', description: 'Description of Car 5', buttonText: 'View Details' },
-    { imageSrc: require('../../Assets/car6.png'), title: 'Car 6', description: 'Description of Car 6', buttonText: 'View Details' },
-    { imageSrc: require('../../Assets/car7.png'), title: 'Car 7', description: 'Description of Car 7', buttonText: 'View Details' },
+    // Add more work items here...
   ];
 
   const trendingTags = [
@@ -37,7 +50,8 @@ const Home = () => {
       <header className="hero">
         <Snowflakes count={50} />
         <div className="hero-overlay">
-          <Navbar />
+          {/* Pass the isScrolled prop to Navbar */}
+          <Navbar isScrolled={isScrolled} />
           <div className="hero-content">
             <h1 className="hero-title">
               Get <span className="hero-highlight">thousands of assets</span> for Any Project from a Broad Range of Categories.
