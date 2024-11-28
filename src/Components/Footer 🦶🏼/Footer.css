@@ -1,0 +1,127 @@
+/* Footer container */
+.footer-container {
+    padding: 40px;
+    background-color: #0D0C12;
+    color: #333;
+    font-family: DINNextLTPro-Light, sans-serif;
+}
+
+/* Footer header for the logo */
+.footer-header {
+    display: flex;
+    justify-content: flex-start; /* Align the logo to the left */
+    margin-bottom: 30px;
+}
+
+
+/* Container for footer links and newsletter */
+.footer-links-newsletter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Footer Links */
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 65%; /* Adjust the width to make space for newsletter */
+}
+
+/* Individual footer link groups */
+.footer-links-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: auto;
+    margin-right: 15px;
+}
+
+/* Footer link titles */
+.footer-link-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4C4C4C;
+    text-align: left;
+}
+
+/* Footer link items */
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.footer-link:hover {
+    color: #dc3545;
+}
+
+/* Newsletter container */
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 30%; /* Adjusted width to fit in the same line as footer links */
+}
+
+/* Newsletter title */
+.newsletter-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #dc3545;
+    text-align: left;
+}
+
+/* Newsletter form */
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+}
+
+/* Newsletter input field */
+.newsletter-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    color: white;
+    background-color:#0D0C12;
+}
+
+/* Newsletter button */
+.newsletter-btn {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter-btn:hover {
+    background-color: #c82333;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Footer bottom left and right sections */
+.footer-bottom-left, .footer-bottom-right {
+    color: #555;
+}

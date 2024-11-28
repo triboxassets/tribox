@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar ⬆️/Navbar.tsx';
 import Snowflakes from '../Snowflakes ❄️/Snowflakes.tsx';
 import WorkCard from '../WorkCard 😀/WorkCard.tsx';
+import Footer from '../Footer 🦶🏼/Footer.tsx';
 import SearchIcon from '../../Assets/search.svg';
 import ArrowIcon from '../../Assets/arrow.svg';
 import Banner from '../../Assets/banner.svg';
@@ -159,6 +160,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
