@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -24,14 +24,14 @@ button {
   color: inherit;
 }
 
-/* Home Page */
+
 .home {
   width: 100%;
 }
 
-/* ===================== */
-/* Hero Section */
-/* ===================== */
+
+
+
 .hero {
   position: relative;
   background: url('../../Assets/jungleart.png') no-repeat center center/cover;
@@ -53,33 +53,33 @@ button {
   width: 100%;
 }
 
-/* Hero Content - Limited to 80% */
+
 .hero-content {
   text-align: left;
-  width: 80%; /* Adjusted to 80% of the screen width */
-  max-width: 1000px; /* Optional max-width to limit large screens */
+  width: 80%; 
+  max-width: 1000px; 
   margin: 0 auto;
-  margin-bottom: 20px; /* Reduce this value */
+  margin-bottom: 20px; 
 }
 
 
 .hero-title {
   color: #ffffff;
-  font-family: 'DINNextLTPro-Light', sans-serif;
-  font-weight: 500;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 300;
   line-height: 1;
   font-size: 4rem;
 }
 
 .hero-highlight {
   color: #ffffff;
-  font-family: 'DINNextLTPro-Black', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
   font-weight: 700;
   line-height: 1;
   font-size: 4rem;
 }
 
-/* Search Bar Styling */
+
 
 .search-bar {
   position: relative;
@@ -95,7 +95,7 @@ button {
   align-items: center;
 }
 
-/* Add animation to the pulsating gradient border */
+
 @keyframes pulseGradient {
   0% {
     background-position: 0% 50%;
@@ -124,12 +124,12 @@ button {
     #a856ff 180deg,
     #1dff6c 225deg,
     #ff5f0e 270deg,
-    #7300ff 360deg  /* Hot Pink */
+    #7300ff 360deg  
   );
-  background-size: 200% 200%; /* Make the gradient larger for smooth animation */
-  animation: pulseGradient 2.5s ease infinite; /* Apply the animation */
+  background-size: 200% 200%; 
+  animation: pulseGradient 2.5s ease infinite; 
   border-radius: 35px;
-  z-index: -1; /* Ensure it stays behind the content */
+  z-index: -1; 
 }
 
 
@@ -151,7 +151,7 @@ button {
 .search-category span {
   color: #F0555B;
   font-size: 36.81px;
-  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
   font-weight: 300;
 }
 
@@ -202,16 +202,16 @@ button {
   outline: none;
 }
 
-/* ===================== */
-/* Trending Searches Section (Updated) */
-/* ===================== */
+
+
+
 .trending-searches {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 16px; /* Space between text and tags */
-  padding: 10px 0 20px 0; /* Reduced top padding */
+  gap: 16px; 
+  padding: 10px 0 20px 0; 
 }
 
 .trending-searches-header {
@@ -219,7 +219,7 @@ button {
   font-size: 24px;
   font-family: 'DIN Next LT Pro', sans-serif;
   font-weight: 400;
-  margin-right: 20px; /* Space between header and tags */
+  margin-right: 20px; 
 }
 
 .tags-container {
@@ -231,9 +231,9 @@ button {
 }
 
 .tag {
-  padding: 6px 12px; /* Smaller padding for tags */
-  border-radius: 16px; /* Slightly smaller radius */
-  border: 4px solid; /* Reduced border thickness */
+  padding: 6px 12px; 
+  border-radius: 16px; 
+  border: 4px solid; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,131 +241,129 @@ button {
 
 .tag-text {
   color: white;
-  font-size: 18px; /* Smaller font size */
+  font-size: 18px; 
   font-family: 'DIN Next LT Pro', sans-serif;
   font-weight: 400;
 }
 
-/* Banner */
+
 
 .banner-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically if the height is defined */
-  margin-top: 20px; /* Optional: Add spacing above the banner */
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 20px; 
 }
 
 .banner {
-  max-width: 80%; /* Ensure it scales responsively */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 80%; 
+  height: auto; 
 }
 
-/* Section for Tribox content */
+
 .tribox-container {
   display: flex;
-  justify-content: space-between; /* Space out content and image */
+  justify-content: space-between; 
   align-items: center;
   margin-top: 40px;
-  flex-direction: row-reverse; /* Keep image on the right */
-  padding: 0 20px; /* Add padding to prevent overflow */
+  flex-direction: row-reverse; 
+  padding: 0 20px; 
 }
 
 .tribox-content {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Maintain gap */
-  padding: 20px; /* Ensure padding prevents content from touching the edges */
+  gap: 20px; 
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: normal;
+  padding: 20px; 
   color: white;
-  max-width: 600px; /* Limit width to fit the screen */
+  max-width: 600px;
 }
 
 .tribox-header {
-  font-family: 'DINNextLTPro-Bold', sans-serif;
-  font-weight: 300;
-  font-size: 60px; /* Reduced font size */
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: normal;
+  font-size: 60px;
   text-align: left;
 }
 
 .tribox-title {
-  color: white;
+  color: rgb(255, 255, 255); 
+  font-family: 'DINNextLTPro', sans-serif;
+  font-size: 60px;
+  font-weight: normal;
 }
 
 .tribox-highlight {
   color: #ED254E;
-  font-family: 'DINNextLTPro-Light', sans-serif;
-  font-size: 60px; /* Reduced font size */
+  font-family: 'DINNextLTPro', sans-serif;
+  font-size: 60px; 
   font-weight: 900;
 }
 
 .tribox-description {
-  width: 100%; /* Allow responsive width */
-  max-width: 500px; /* Limit maximum width for a more compact layout */
-  font-size: 16px; /* Slightly smaller font size */
-  line-height: 24px; /* Adjusted line height for better text density */
-  font-family: 'DINNextLTPro-Regular', sans-serif;
-  font-weight: 300;
+  width: 100%; 
+  max-width: 500px; 
+  font-size: 16px; 
+  line-height: 24px; 
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: normal;
   text-align: left;
-  margin: 0 auto; /* Center it within its container */
+  margin: 0 auto; 
 }
 
 .tribox-button {
-  width: 160px; /* Reduced width */
-  height: 50px; /* Reduced height */
+  width: 160px; 
+  height: 50px; 
   background: white;
   border-radius: 29.27px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 15px; /* Reduced padding */
+  padding: 10px 15px; 
 }
 
 .tribox-button-inner {
   display: flex;
   align-items: center;
-  gap: 10px; /* Reduced gap between icon and text */
+  gap: 10px; 
 }
 
 .tribox-button-icon {
-  width: 20px; /* Reduced icon size */
-  height: 20px; /* Reduced icon size */
-  background-color: transparent; /* Make the icon background transparent */
+  width: 20px; 
+  height: 20px; 
+  background-color: transparent; 
 }
 
 .tribox-button-text {
   font-size: 18px;
-  font-weight: 200; /* Light font weight */
-  color: black; /* Light color for the button text */
+  font-weight: 200; 
+  color: black; 
   text-align: center;
-  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 500;
 }
 
 .tribox-image-container {
   display: flex;
-  justify-content: center; /* Center the image horizontally */
+  justify-content: center; 
   margin-top: 20px;
 }
 
 .tribox-image {
-  width: 100%; /* Responsive width */
-  max-width: 700px; /* Limit the maximum width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Avoid cropping the image */
-  margin-left: 10px; /* Add spacing */
+  width: 100%; 
+  max-width: 700px; 
+  height: auto; 
+  object-fit: contain; 
+  margin-left: 10px; 
 }
 
-.tribox-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Reduced gap between elements */
-  padding: 40px;
-  color: white;
-}
 
-/* ===================== */
-/* Infinite Scroll Animation */
-/* ===================== */
 
-/* Infinite Scroll Container */
+
+
+
 .infinite-scroll-container {
   position: relative;
   width: 100%;
@@ -383,47 +381,47 @@ button {
 .loop-slider {
   display: flex;
   width: 100%;
-  animation: scroll 20s linear infinite; /* Adjust speed as necessary */
+  animation: scroll 20s linear infinite; 
 }
 
 .inner {
   display: flex;
-  min-width: 100%; /* Make sure it takes the full width of the container */
+  min-width: 100%; 
 }
 
 .scroll-image {
-  width: 119px; /* Set image width to make them smaller */
+  width: 119px; 
   height: auto;
-  margin-right: 15px; /* Adjust margin to maintain spacing between images */
+  margin-right: 15px; 
   object-fit: contain;
 }
 
-/* Keyframes for left-to-right scrolling (default) */
+
 @keyframes scroll {
   0% {
-    transform: translateX(0); /* Start at the first image */
+    transform: translateX(0); 
   }
   100% {
-    transform: translateX(-100%); /* Move by one full image width */
+    transform: translateX(-100%); 
   }
 }
 
-/* Adjust for right-to-left scrolling on the second carousel */
+
 .second-carousel .loop-slider {
   animation: scroll-right-to-left 20s linear infinite;
 }
 
-/* Keyframes for right-to-left scrolling */
+
 @keyframes scroll-right-to-left {
   0% {
-    transform: translateX(0); /* Start at the first image */
+    transform: translateX(0); 
   }
   100% {
-    transform: translateX(100%); /* Move by one full image width in reverse direction */
+    transform: translateX(100%); 
   }
 }
 
-/* Duplicate the images */
+
 .loop-slider {
   display: flex;
 }
@@ -433,25 +431,26 @@ button {
 }
 
 .inner img {
-  width: 119px; /* Ensure the images are smaller */
+  width: 119px; 
 }
 
-/* Featured Works Title */
+
 .featured-works-container {
   text-align: center;
   margin-top: 60px;
 }
 
 .featured-works-title {
-  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 700;
   font-size: 3rem;
-  color: #fff; /* Set the text color to white */
+  color: #fff; 
   display: inline-block;
   letter-spacing: 5px;
 }
 
 
-/* Menu Section */
+
 .menu-container {
   text-align: center;
   margin-top: 60px;
@@ -460,10 +459,10 @@ button {
 .menu {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap */
-  justify-content: center; /* Center items */
+  flex-wrap: wrap; 
+  justify-content: center; 
   padding: 0;
-  gap: 20px; /* Space between cards */
+  gap: 20px; 
 }
 
 .menu-item {
@@ -471,46 +470,46 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: transparent; /* Background for the card */
+  background-color: transparent;
   color: #fff;
-  font-size: 16.8px; /* Slightly larger font */
-  font-family: 'DINNextLTPro-Light', sans-serif;
-  border-radius: 15px; /* Rounded corners */
-  width: 150px; /* Fixed width for cards */
-  padding: 10px 8px; /* Padding for inner spacing */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 16.8px;
+  font-family: 'DINNextLTPro', sans-serif;
+  border-radius: 15px; 
+  width: 150px; 
+  padding: 10px 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  text-align: center; /* Ensure text is centered */
+  text-align: center;
   
-  /* Prevent text wrapping and overflow */
-  white-space: nowrap; /* Prevent text from breaking into multiple lines */
-  overflow: hidden; /* Hide overflowing text */
-  text-overflow: ellipsis; /* Truncate long text with ellipsis */
-  height: auto; /* Allow height to adjust based on content */
+  
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  height: auto; 
 }
 
-/* Specific Target for Presentation Template */
+
 .menu-item:nth-child(6) {
-  /* For Presentation Template card, adjust width or allow text to fit */
-  width: auto; /* Let the width expand based on the text */
-  max-width: 200px; /* Set a max-width to prevent it from getting too large */
-  text-overflow: unset; /* Remove ellipsis for this specific item */
-  white-space: normal; /* Allow wrapping for this specific item */
-  padding: 10px 12px; /* Adjust padding to accommodate longer text */
+  
+  width: auto; 
+  max-width: 200px; 
+  text-overflow: unset; 
+  white-space: normal; 
+  padding: 10px 12px; 
 }
 
-/* Icon Styling */
+
 .menu-icon {
   font-size: 42px;
-  margin-bottom: 12px; /* Reduce gap between icon and text */
+  margin-bottom: 12px; 
   transition: color 0.3s ease;
 }
 
-/* Hover Effects */
+
 .menu-item:hover {
-  transform: scale(1.1); /* Slightly grow on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: scale(1.1); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .menu-item:hover:before {
@@ -519,38 +518,38 @@ button {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background-color: currentColor; /* Uses the current color of the item */
-  opacity: 0.2; /* Subtle overlay effect */
-  z-index: -1; /* Ensures it stays behind content */
+  background-color: currentColor; 
+  opacity: 0.2; 
+  z-index: -1; 
 }
 
-/* Hover Color Changes */
+
 .menu-item:nth-child(1):hover {
-  color: #ED254E; /* 3D Models */
+  color: #ED254E; 
 }
 
 .menu-item:nth-child(2):hover {
-  color: #FFBE0B; /* Mockups */
+  color: #FFBE0B; 
 }
 
 .menu-item:nth-child(3):hover {
-  color: #A0ECD0; /* Templates */
+  color: #A0ECD0; 
 }
 
 .menu-item:nth-child(4):hover {
-  color: #6610F2; /* Audio Samples */
+  color: #6610F2; 
 }
 
 .menu-item:nth-child(5):hover {
-  color: #E5C1BD; /* Photos */
+  color: #E5C1BD; 
 }
 
 .menu-item:nth-child(6):hover {
-  color: #9ED0E6; /* Presentation Templates */
+  color: #9ED0E6; 
 }
 
 .menu-item:nth-child(7):hover {
-  color: #61E294; /* Fonts */
+  color: #61E294; 
 }
 
 
@@ -562,13 +561,13 @@ button {
   justify-items: center;
 }
 
-/* PHONE RESPONSIVE SECTION */
+
 
 @media (max-width: 768px) {
   .tribox-description {
-    max-width: 90%; /* Use a percentage for smaller screens */
-    font-size: 14px; /* Reduce font size */
-    line-height: 20px; /* Tighten line height */
-    text-align: center; /* Center-align for better readability on narrow screens */
+    max-width: 90%; 
+    font-size: 14px; 
+    line-height: 20px; 
+    text-align: center; 
   }
 }

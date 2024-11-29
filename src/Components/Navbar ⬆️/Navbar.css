@@ -71,8 +71,8 @@
 .header-menu-item {
   color: #FDFDFC;
   font-size: 16px; /* Further reduced font size for menu items */
-  font-family: 'DINNextLTPro-Bold', sans-serif;
-  font-weight: 800;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 500;
   letter-spacing: 1.2px; /* Reduced letter-spacing */
   padding: 0 5px; /* Reduced padding to make items smaller */
 }
@@ -92,7 +92,7 @@
 .signin-text {
   color: black;
   font-size: 18px; /* Reduced font size */
-  font-family: 'DINNextLTPro-Medium', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
   font-weight: 500;
   line-height: 1;
   text-align: center;

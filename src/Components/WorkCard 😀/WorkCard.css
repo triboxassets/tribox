@@ -58,7 +58,7 @@
 
 .work-card-meta strong,
 .work-card-meta span {
-  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
   font-size: 10.2px; /* Slightly increased font size */
   transition: color 0.3s ease;
 }
@@ -73,7 +73,7 @@
 
 /* Title styles */
 .work-card-title {
-  font-family: 'DINNextLTPro-Bold', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
   font-size: 32.6px; /* Slightly increased font size */
   font-weight: 700;
   color: white;
@@ -95,7 +95,7 @@
 .work-card-description {
   font-size: 10.2px;
   color: white;
-  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
   margin: 8px 0;
   flex-grow: 1;
   overflow: hidden;
@@ -123,7 +123,7 @@
 .rating-badge {
   background-color: var(--accent-color);
   color: black;
-  font-family: 'DINNextLTPro-Light', sans-serif;
+  font-family: 'DINNextLTPro', sans-serif;
   border-radius: 5px;
   padding: 2.04px 5.1px; /* Slightly increased padding */
   font-size: 10.2px; /* Slightly increased font size */
