@@ -1,0 +1,28 @@
+
+.preview-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222; /* Dark background for contrast */
+  border: 2px solid #444; /* Subtle border for separation */
+  border-radius: 10px; /* Rounded corners for better aesthetics */
+  width: 95%;
+  height: 600px; /* Adjust based on your layout */
+  margin: 10px auto; /* Center horizontally with some vertical spacing */
+  overflow: hidden; /* Ensures image doesn't spill outside the container */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+}
+  
+  .preview-image {
+    max-width: 100%; /* Ensure image fits horizontally */
+    max-height: 100%; /* Ensure image fits vertically */
+    object-fit: contain; /* Maintain image aspect ratio */
+  }
+  
+  .preview-placeholder {
+    color: #888; /* Lighter color for placeholder text */
+    font-size: 16px; /* Readable text size */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some spacing inside */
+  }
+  
