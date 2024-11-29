@@ -14,7 +14,7 @@ function App() {
             {/* Define routes for your pages */}
             <Route path="/login" element={<LoginPage />} /> {/* Login Page Route */}
             <Route path="/forgot-password" element={<ForgotPasswordForm />} />
-            <Route path="/" element={<Home />} /> {/* Home Page Route */}
+            <Route path="/" element={<Home />} />
           </Routes>
         </Router>
       </div>

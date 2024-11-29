@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link component for navigation
 import slides from './slides.ts'; // Move slides data to a separate file
 import logo from '../../Assets/whitelogo.svg';
 import './LoginPage.css';
@@ -39,7 +40,10 @@ const Slideshow: React.FC = () => {
     <>
       <img className="login-background-image" src={slides[currentSlide].image} alt="Slide" />
       <div className="login-overlay" />
-      <img className="login-logo" src={logo} alt="Logo" />
+      {/* Make the logo a clickable link */}
+      <Link to="/Home">
+        <img className="login-logo" src={logo} alt="Logo" />
+      </Link>
       <div className="login-text-content">
         <h1>{slides[currentSlide].heading}</h1>
         <p>{slides[currentSlide].description}</p>

@@ -10,7 +10,7 @@
   left: 0;         /* Align it to the left */
   right: 0;        /* Align it to the right */
   z-index: 10;     /* Ensure it stays above other content */
-  padding: 40px;  /* Reduced padding */
+  padding: 40px;   /* Reduced padding */
   transition: background-color 0.1s ease-in-out;
 }
 
@@ -27,9 +27,6 @@
 .navbar-wrapper.navbar-scrolled:hover {
   background-color: #ED254E;  /* Change background color to red on hover */
 }
-
-
-
 
 /* Container for the whole Navbar */
 .navbar-container {
@@ -70,13 +67,35 @@
 
 .header-menu-item {
   color: #FDFDFC;
-  font-size: 16px; /* Further reduced font size for menu items */
+  font-size: 16px; /* Reduced font size */
   font-family: 'DINNextLTPro', sans-serif;
   font-weight: 500;
   letter-spacing: 1.2px; /* Reduced letter-spacing */
   padding: 0 5px; /* Reduced padding to make items smaller */
+  position: relative; /* Required for the underline */
+  transition: color 0.3s ease-in-out;
 }
 
+.header-menu-item:hover {
+  color: white;
+  font-weight: 800;
+}
+
+/* Underline Animation */
+.header-menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Position the underline just below the text */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.header-menu-item:hover::after {
+  width: 100%; /* Animate the underline to full width */
+}
 
 /* Sign-in button styles */
 .signin-button {
@@ -87,6 +106,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .signin-text {
@@ -96,4 +116,13 @@
   font-weight: 500;
   line-height: 1;
   text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.signin-button:hover {
+  background: black; /* Invert the background color */
+}
+
+.signin-button:hover .signin-text {
+  color: white; /* Invert the text color */
 }
