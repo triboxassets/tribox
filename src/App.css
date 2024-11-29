@@ -1,12 +1,58 @@
+/* Regular weight */
 @font-face {
   font-family: 'DINNextLTPro';
-  src: url('../src/Assets/fonts/DINNextRoundedLTPro-Regular.ttf') format('truetype');
-  src:url('../src//Assets/fonts/DINNextLTPro-BlackCondensed.ttf') format('truetype');
+  src: url('../src/Assets/fonts/DINNextLTPro-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
+/* Light weight */
+@font-face {
+  font-family: 'DINNextLTPro';
+  src: url('../src/Assets/fonts/DINNextLTPro-Light.ttf') format('truetype');
+  font-weight: 300;  /* Light font weight */
+  font-style: normal;
+}
+
+/* Medium weight */
+@font-face {
+  font-family: 'DINNextLTPro';
+  src: url('../src/Assets/fonts/DINNextLTPro-Medium.ttf') format('truetype');
+  font-weight: 500;  /* Medium font weight */
+  font-style: normal;
+}
+
+/* Bold weight */
+@font-face {
+  font-family: 'DINNextLTPro';
+  src: url('../src/Assets/fonts/DINNextLTPro-Bold.ttf') format('truetype');
+  font-weight: 700;  /* Bold font weight */
+  font-style: normal;
+}
+
+/* Black weight */
+@font-face {
+  font-family: 'DINNextLTPro';
+  src: url('../src/Assets/fonts/DINNextLTPro-Black.ttf') format('truetype');
+  font-weight: 900;  /* Black font weight */
+  font-style: normal;
+}
+
+/* Ultra Light weight */
+@font-face {
+  font-family: 'DINNextLTPro';
+  src: url('../src/Assets/fonts/DINNextLTPro-UltraLight.ttf') format('truetype');
+  font-weight: 100;  /* Ultra Light font weight */
+  font-style: normal;
+}
+
+/* Google Fonts - DM Serif Display */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@100;300;400;700&display=swap');
+
+/* Using the font in the App */
 .App {
   text-align: center;
+  font-family: 'DINNextLTPro', sans-serif; /* Default font */
 }
 
 .App-logo {
@@ -15,9 +61,9 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+}
 }
 
 .App-header {
@@ -29,6 +75,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'DM Serif Display', serif; /* Google font */
 }
 
 .App-link {
@@ -37,9 +84,9 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
 }

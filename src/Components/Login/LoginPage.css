@@ -1,0 +1,243 @@
+/* LoginPage.css */
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: white;
+    font-family: 'DINNextLTPro', sans-serif;
+}
+
+.login-left {
+    width: 50%;
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: 'DINNextLTPro', sans-serif;
+}
+
+.login-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.login-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    z-index: 1;
+    font-family: 'DINNextLTPro', sans-serif;
+}
+
+.login-text-content {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+    z-index: 1;
+    font-family: 'DINNextLTPro', sans-serif;
+}
+
+.login-text-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'DINNextLTPro', sans-serif;
+}
+
+.photo-credit {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+}
+
+.login-right {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+}
+
+.login-bar {
+    position: absolute;
+    height: 100%;
+    background-color: #4c1bfc; /* Purple bar */
+    width: 50%; /* Initially spans Sign-In */
+    transition: transform 0.3s, width 0.3s;
+}
+
+.login-bar-container {
+    position: relative;
+    height: 4px;
+    margin-top: 5px;
+    display: flex;
+    background-color: #DADADA; /* Grey bar as the base */
+    transition: background-color 0.3s;
+}
+
+.login-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+    color: black;
+}
+
+.login-nav .active {
+    font-size: 20px;
+    color: #4c1bfc;
+    font-weight: 700;
+    font-family: 'DINNextLTPro-Bold', sans-serif;
+}
+
+.login-nav span {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+.login-nav a {
+    font-size: 20px;
+    color: #242423;
+    text-decoration: none;
+    font-family: 'DINNextLTPro', sans-serif;
+    font-weight: 300;
+}
+
+.login-form-container h1 {
+    font-size: 64px;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 300; /* Light weight */
+    color: #242423;
+    text-align: left;
+}
+
+/* Style for p */
+.login-form-container > p {
+    color: #242423;
+    margin-bottom: 40px;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+    text-align: left;
+    white-space: normal;
+    max-width: 300px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    font-family: 'DINNextLTPro', sans-serif;
+    font-weight: 500;
+    color: #333533;
+    text-align: left;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-family: 'DINNextLTPro-Regular', sans-serif;
+    font-size: 16;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 16px; /* Increase padding to make the input taller */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+    background-color: #F5F7FA;
+    height: 50px; /* Alternatively, set a specific height */
+}
+
+
+.password-input {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 18px;  /* Reduced size */
+    height: 18px; /* Reduced size */
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'DINNextLTPro', sans-serif;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+    color: #333533;
+}
+
+.forgot-password {
+    color: #0066cc;
+    text-decoration: none;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+}
+
+.sign-in-button {
+    width: 100%;
+    padding: 14px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: 'DINNextLTPro-Medium', sans-serif;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+    color: black;
+}
+
+.social-button {
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'DINNextLTPro-Light', sans-serif;
+}
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Add this import for Link
 import { ReactComponent as TriboxLogo } from '../../Assets/whitelogo.svg';
 import './Navbar.css';
 
@@ -17,7 +18,9 @@ const Navbar: React.FC<{ isScrolled: boolean }> = ({ isScrolled }) => (
           ))}
         </div>
         <div className="signin-button">
-          <span className="signin-text">Sign In</span>
+          <Link to="/login"> {/* Link component to navigate to the login page */}
+            <span className="signin-text">Sign Up/Login</span>
+          </Link>
         </div>
       </div>
     </div>

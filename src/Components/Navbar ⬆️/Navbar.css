@@ -80,7 +80,7 @@
 
 /* Sign-in button styles */
 .signin-button {
-  width: 130px; /* Reduced width */
+  width: 160px; /* Reduced width */
   height: 50px; /* Reduced height */
   background: white;
   border-radius: 25px; /* Slightly smaller border radius */
