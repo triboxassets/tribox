@@ -4,12 +4,19 @@ import Slideshow from './Slideshow.tsx';
 import NavigationTabs from './NavigationTabs.tsx';
 import LoginForm from './LoginForm.tsx';
 import CreateAccountForm from './CreateAccountForm.tsx';
+import { UilMoon, UilSun } from '@iconscout/react-unicons'; // Import Unicons
 
 const LoginPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'Sign-In' | 'Create-Account'>('Sign-In');
+  const [darkMode, setDarkMode] = useState(false); // State to track dark mode
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+    document.body.classList.toggle('dark-mode', !darkMode);
+  };
 
   return (
-    <div className="login-container">
+    <div className={`login-container ${darkMode ? 'dark' : ''}`}>
       <div className="login-left">
         <Slideshow />
       </div>
@@ -18,6 +25,11 @@ const LoginPage: React.FC = () => {
         <div className="login-form-container">
           {activeTab === 'Sign-In' ? <LoginForm /> : <CreateAccountForm />}
         </div>
+      </div>
+
+      {/* Dark mode toggle icon */}
+      <div className="dark-mode-toggle" onClick={toggleDarkMode}>
+        {darkMode ? <UilSun /> : <UilMoon />} {/* Toggle between moon and sun icons */}
       </div>
     </div>
   );
