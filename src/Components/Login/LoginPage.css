@@ -450,7 +450,7 @@
   }
   
   body.dark-mode .back-to-signin-button {
-    color: #fff; /* Ensure link color is white */
+    color: #ED254E; /* Ensure link color is white */
   }
   
   /* Optional: Change input field text color */
@@ -483,3 +483,32 @@ body.dark-mode .login-form-container > p {
     max-width: 300px;
     width: 100%;
 }
+
+.form-options p {
+    font-family: 'DINNextLTPro', sans-serif;
+    font-size: 16px;
+    color: black; /* Default color for light mode */
+  }
+  
+  body.dark-mode .form-options p {
+    color: white; /* Change text color to white in dark mode */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'DINNextLTPro', sans-serif;
+    background-color: #F5F7FA; /* Light mode background */
+    height: 50px;
+  }
+  
+  /* Dark Mode Variant */
+  body.dark-mode .form-group input {
+    background-color: #333; /* Dark background for dark mode */
+    color: #fff; /* White text for better contrast */
+    border: 1px solid #555; /* Darker border in dark mode */
+  }
+  
