@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './LoginPage.css';
 import loginImage from '../../Assets/login/loginimage.png';
 import logo from '../../Assets/whitelogo.svg';
@@ -6,12 +6,39 @@ import googleIcon from '../../Assets/google-icon.svg';
 import metaIcon from '../../Assets/meta-icon.svg';
 import appleIcon from '../../Assets/apple-icon.svg';
 import eyeIcon from '../../Assets/eye-icon.svg';
+import eyeIconOpen from '../../Assets/eye-icon-open.svg'; // Import the open eye icon
 
 const LoginPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'Sign-In' | 'Create-Account'>('Sign-In');
+  const [passwordVisible, setPasswordVisible] = useState(false);  // State to toggle password visibility
+  const barRef = useRef<HTMLDivElement>(null);
+  const navRefs = useRef<{ [key: string]: HTMLSpanElement | null }>({
+    'Sign-In': null,
+    'Create-Account': null,
+  });
+
+  useEffect(() => {
+    const updateBarPosition = () => {
+      const activeTabElement = navRefs.current[activeTab];
+      if (barRef.current && activeTabElement) {
+        const { offsetWidth, offsetLeft } = activeTabElement;
+        barRef.current.style.width = `${offsetWidth}px`;
+        barRef.current.style.transform = `translateX(${offsetLeft}px)`;
+      }
+    };
+
+    updateBarPosition();
+    window.addEventListener('resize', updateBarPosition);
+
+    return () => window.removeEventListener('resize', updateBarPosition);
+  }, [activeTab]);
 
   const handleTabClick = (tab: 'Sign-In' | 'Create-Account') => {
     setActiveTab(tab);
+  };
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible); // Toggle the visibility state
   };
 
   return (
@@ -28,28 +55,26 @@ const LoginPage: React.FC = () => {
       </div>
 
       <div className="login-right">
-        <div className="login-nav">
-          <span
-            className={activeTab === 'Sign-In' ? 'active' : ''}
-            onClick={() => handleTabClick('Sign-In')}
-          >
-            Sign-In
-          </span>
-          <span>|</span>
-          <span
-            className={activeTab === 'Create-Account' ? 'active' : ''}
-            onClick={() => handleTabClick('Create-Account')}
-          >
-            Create an account
-          </span>
-        </div>
-        <div className="login-bar-container">
-          <div
-            className="login-bar"
-            style={{
-              transform: activeTab === 'Sign-In' ? 'translateX(0)' : 'translateX(100%)',
-            }}
-          />
+        <div className="login-nav-container">
+          <div className="login-nav">
+            <span
+              ref={(el) => (navRefs.current['Sign-In'] = el)}
+              className={activeTab === 'Sign-In' ? 'active' : ''}
+              onClick={() => handleTabClick('Sign-In')}
+            >
+              Sign-In
+            </span>
+            <span
+              ref={(el) => (navRefs.current['Create-Account'] = el)}
+              className={activeTab === 'Create-Account' ? 'active' : ''}
+              onClick={() => handleTabClick('Create-Account')}
+            >
+              Create an account
+            </span>
+          </div>
+          <div className="login-bar-container">
+            <div className="login-bar" ref={barRef} />
+          </div>
         </div>
 
         <div className="login-form-container">
@@ -65,8 +90,16 @@ const LoginPage: React.FC = () => {
                 <div className="form-group">
                   <label>Password</label>
                   <div className="password-input">
-                    <input type="password" placeholder="Enter your password" />
-                    <img src={eyeIcon} alt="Show password" className="eye-icon" />
+                    <input
+                      type={passwordVisible ? 'text' : 'password'}  // Toggle the input type
+                      placeholder="Enter your password"
+                    />
+                    <img
+                      src={passwordVisible ? eyeIconOpen : eyeIcon}  // Toggle the icon
+                      alt="Show password"
+                      className="eye-icon"
+                      onClick={togglePasswordVisibility}  // Toggle password visibility on click
+                    />
                   </div>
                 </div>
                 <div className="form-options">

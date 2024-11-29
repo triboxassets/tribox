@@ -1,5 +1,3 @@
-/* LoginPage.css */
-
 .login-container {
     width: 100%;
     height: 100vh;
@@ -58,7 +56,7 @@
     display: block;
     margin-top: 20px;
     font-size: 12px;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
 }
 
 .login-right {
@@ -66,40 +64,43 @@
     padding: 40px;
     display: flex;
     flex-direction: column;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
+}
+
+.login-bar-container {
+    position: relative;
+    height: 4px;
+    display: flex;
+    background-color: #DADADA; /* Grey bar as the base */
+    width: 42%; /* Make the container span the full width */
 }
 
 .login-bar {
     position: absolute;
     height: 100%;
     background-color: #4c1bfc; /* Purple bar */
-    width: 50%; /* Initially spans Sign-In */
     transition: transform 0.3s, width 0.3s;
-}
-
-.login-bar-container {
-    position: relative;
-    height: 4px;
-    margin-top: 5px;
-    display: flex;
-    background-color: #DADADA; /* Grey bar as the base */
-    transition: background-color 0.3s;
+    bottom: 0; /* Aligns the bar with the bottom of the container */
 }
 
 .login-nav {
+    font-size: 20px;
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
+    font-weight: 300;
     color: black;
+    position: relative;
 }
 
 .login-nav .active {
     font-size: 20px;
     color: #4c1bfc;
     font-weight: 700;
-    font-family: 'DINNextLTPro-Bold', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
+    font-weight: 700;
 }
+
 
 .login-nav span {
     cursor: pointer;
@@ -118,7 +119,7 @@
 }
 
 .login-form-container h1 {
-    font-size: 64px;
+    font-size: 72px;
     font-family: 'DM Serif Display', serif;
     font-weight: 300; /* Light weight */
     color: #242423;
@@ -129,7 +130,8 @@
 .login-form-container > p {
     color: #242423;
     margin-bottom: 40px;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
+    font-weight: normal; 
     text-align: left;
     white-space: normal;
     max-width: 300px;
@@ -138,8 +140,6 @@
 
 .form-group {
     margin-bottom: 20px;
-    font-family: 'DINNextLTPro', sans-serif;
-    font-weight: 500;
     color: #333533;
     text-align: left;
 }
@@ -149,7 +149,7 @@
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    font-family: 'DINNextLTPro-Regular', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
     font-size: 16;
 }
 
@@ -159,7 +159,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
     background-color: #F5F7FA;
     height: 50px; /* Alternatively, set a specific height */
 }
@@ -171,12 +171,12 @@
 
 .eye-icon {
     position: absolute;
-    right: 12px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    width: 18px;  /* Reduced size */
-    height: 18px; /* Reduced size */
+    width: 18px;  
+    height: 18px;
 }
 
 .form-options {
@@ -191,14 +191,15 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
     color: #333533;
 }
+
 
 .forgot-password {
     color: #0066cc;
     text-decoration: none;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
 }
 
 .sign-in-button {
@@ -211,14 +212,14 @@
     font-size: 16px;
     cursor: pointer;
     margin-bottom: 20px;
-    font-family: 'DINNextLTPro-Medium', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
 }
 
 .social-login {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
     color: black;
 }
 
@@ -234,7 +235,7 @@
     background: white;
     cursor: pointer;
     font-size: 16px;
-    font-family: 'DINNextLTPro-Light', sans-serif;
+    font-family: 'DINNextLTPro', sans-serif;
 }
 
 .social-button img {
