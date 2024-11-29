@@ -4,6 +4,7 @@
     display: flex;
     background: white;
     font-family: 'DINNextLTPro', sans-serif;
+    position: relative; /* Ensure relative positioning for the absolute child */
 }
 
 .login-left {
@@ -72,8 +73,9 @@
     display: flex;
     flex-direction: column;
     font-family: 'DINNextLTPro', sans-serif;
+    transform: scale(0.9); /* Reduces the scale slightly */
+    transform-origin: center; 
 }
-
 
 .login-bar-container {
     position: relative;
