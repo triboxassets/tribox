@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import googleIcon from '../../Assets/google-icon.svg';
 import metaIcon from '../../Assets/meta-icon.svg';
 import appleIcon from '../../Assets/apple-icon.svg';
+import PasswordInput from './PasswordInput.tsx'; // Import the new component
 import './LoginPage.css';
 
 const CreateAccountForm: React.FC = () => {
-  const [step, setStep] = useState(1); // Tracks the current step of the form
-  const [email, setEmail] = useState(''); // Stores the email entered by the user
+  const [step, setStep] = useState(1);
+  const [email, setEmail] = useState('');
   const [formData, setFormData] = useState({
     fullName: '',
     password: '',
@@ -19,7 +20,7 @@ const CreateAccountForm: React.FC = () => {
   const handleNext = (e: React.FormEvent) => {
     e.preventDefault();
     if (step === 1 && email.trim()) {
-      setStep(2); // Move to step 2 if email is valid
+      setStep(2);
     }
   };
 
@@ -27,7 +28,6 @@ const CreateAccountForm: React.FC = () => {
     e.preventDefault();
     if (formData.agreeToTerms) {
       console.log('User Registered:', { email, ...formData });
-      // Handle registration logic here (e.g., API call)
     } else {
       alert('You must agree to the terms and conditions to register.');
     }
@@ -96,22 +96,20 @@ const CreateAccountForm: React.FC = () => {
             </div>
             <div className="form-group">
               <label>Create New Password</label>
-              <input
-                type="password"
+              <PasswordInput
                 placeholder="Create a password"
-                name="password"
                 value={formData.password}
+                name="password"
                 onChange={handleChange}
                 required
               />
             </div>
             <div className="form-group">
               <label>Confirm Password</label>
-              <input
-                type="password"
+              <PasswordInput
                 placeholder="Confirm your password"
-                name="confirmPassword"
                 value={formData.confirmPassword}
+                name="confirmPassword"
                 onChange={handleChange}
                 required
               />

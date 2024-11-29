@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import eyeIcon from '../../Assets/eye-icon.svg';
 import eyeIconOpen from '../../Assets/eye-icon-open.svg';
 import googleIcon from '../../Assets/google-icon.svg';
@@ -16,7 +17,7 @@ const LoginForm: React.FC = () => {
       <form className="login-form">
         <div className="form-group">
           <label>Email</label>
-          <input type="email" placeholder="Enter your email" />
+          <input type="email" placeholder="Enter your email" required />
         </div>
         <div className="form-group">
           <label>Password</label>
@@ -24,6 +25,7 @@ const LoginForm: React.FC = () => {
             <input
               type={passwordVisible ? 'text' : 'password'}
               placeholder="Enter your password"
+              required
             />
             <img
               src={passwordVisible ? eyeIconOpen : eyeIcon}
@@ -38,9 +40,9 @@ const LoginForm: React.FC = () => {
             <input type="checkbox" />
             <span>Remember me!</span>
           </label>
-          <a href="/forgot-password" className="forgot-password">
+          <Link to="/forgot-password" className="forgot-password">
             Forgot Password?
-          </a>
+          </Link>
         </div>
         <button type="submit" className="sign-in-button">
           Sign in
