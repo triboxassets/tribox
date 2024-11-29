@@ -172,6 +172,61 @@
     height: 50px; 
 }
 
+.form-group select {
+    width: 100%;
+    padding: 16px; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'DINNextLTPro', sans-serif;
+    background-color: #F5F7FA;
+    height: 50px; 
+    appearance: none; /* Hides the default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><path fill="%23999" d="M0 0l5 6 5-6z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #007BFF; /* Highlight border on focus */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25); /* Optional focus shadow */
+}
+
+.form-group select option {
+    font-family: 'DINNextLTPro', sans-serif;
+    font-size: 16px;
+}
+
+.form-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px; /* Spacing between the checkbox and label text */
+    accent-color: #007BFF; /* Modern browsers support this for checkbox styling */
+    border-radius: 4px; /* Optional: rounds the checkbox corners */
+    cursor: pointer;
+}
+
+.form-group label.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-family: 'DINNextLTPro', sans-serif;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.form-group input[type="checkbox"]:focus {
+    outline: 2px solid #007BFF; /* Adds a focus outline for accessibility */
+}
+
+.form-group input[type="checkbox"]:checked {
+    background-color: #007BFF; /* Sets the fill color when the checkbox is checked */
+    border: none; /* Removes border to make it look cleaner */
+}
+
 
 .password-input {
     position: relative;
