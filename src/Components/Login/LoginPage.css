@@ -166,7 +166,7 @@
 .form-group input {
     width: 100%;
     padding: 16px; 
-    border: 1px solid #ddd;
+    border: 1px solid   ;
     border-radius: 8px;
     font-size: 16px;
     font-family: 'DINNextLTPro', sans-serif;
@@ -495,22 +495,11 @@ body.dark-mode .login-form-container > p {
     color: white; /* Change text color to white in dark mode */
   }
   
-  .form-group input {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: 'DINNextLTPro', sans-serif;
-    background-color: #F5F7FA; /* Light mode background */
-    height: 50px;
-  }
-  
   /* Dark Mode Variant */
   body.dark-mode .form-group input {
-    background-color: #333; /* Dark background for dark mode */
+    background-color: #181623; /* Dark background for dark mode */
     color: #fff; /* White text for better contrast */
-    border: 1px solid #555; /* Darker border in dark mode */
+    border: 1px solid #181623; /* Darker border in dark mode */
   }
   
   /* Dark mode version */
@@ -563,4 +552,22 @@ body.dark-mode .social-button:hover {
 
 body.dark-mode .social-button img {
     filter: brightness(0) invert(1); /* This will invert the image color for icons if needed */
+}
+
+body.dark-mode .form-group select {
+    background-color: #181623; /* Dark background */
+    color: #fff; /* Light text for dark mode */
+    border: 1px solid #181623; /* Lighter border for dark mode */
+}
+
+/* Dark mode focus state */
+body.dark-mode .form-group select:focus {
+    border-color: #4c1bfc; /* Highlight with a bright color */
+    box-shadow: 0 0 4px rgba(76, 27, 252, 0.25); /* Optional focus shadow */
+}
+
+/* Dark mode option styling */
+body.dark-mode .form-group select option {
+    background-color: #181623; /* Dark background for options */
+    color: #fff; /* Light text for options */
 }
