@@ -41,22 +41,22 @@
     position: absolute;
     bottom: 40px;
     left: 20px;
-    right: auto;  /* Remove right constraint */
+    right: auto;  
     z-index: 1;
     font-family: 'DINNextLTPro', sans-serif;
-    text-align: left;  /* Align text to the left */
+    text-align: left;  
     color: #D1D1D1;
-    width: auto;  /* Do not reduce width of h1 */
-    max-width: 500px; /* Optional: Set a max-width to prevent it from getting too large */
-    padding: 10px; /* Optional: Add padding for better spacing */
+    width: auto;  
+    max-width: 500px; 
+    padding: 10px; 
 }
 
 .login-text-content h1 {
-    font-size: 64px;  /* Slightly reduce font size */
+    font-size: 64px;  
     font-family: 'DINNextLTPro', sans-serif;
-    width: 100%;  /* Make sure h1 takes up full width */
+    width: 100%;  
     line-height: 1;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Add text shadow */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); 
 }
 
 .photo-credit {
@@ -79,16 +79,16 @@
     position: relative;
     height: 4px;
     display: flex;
-    background-color: #DADADA; /* Grey bar as the base */
-    width: 42%; /* Make the container span the full width */
+    background-color: #DADADA; 
+    width: 42%; 
 }
 
 .login-bar {
     position: absolute;
     height: 100%;
-    background-color: #4c1bfc; /* Purple bar */
+    background-color: #4c1bfc; 
     transition: transform 0.3s, width 0.3s;
-    bottom: 0; /* Aligns the bar with the bottom of the container */
+    bottom: 0; 
 }
 
 .login-nav {
@@ -129,12 +129,12 @@
 .login-form-container h1 {
     font-size: 72px;
     font-family: 'DM Serif Display', serif;
-    font-weight: 300; /* Light weight */
+    font-weight: 300; 
     color: #242423;
     text-align: left;
 }
 
-/* Style for p */
+
 .login-form-container > p {
     color: #242423;
     margin-bottom: 40px;
@@ -163,13 +163,13 @@
 
 .form-group input {
     width: 100%;
-    padding: 16px; /* Increase padding to make the input taller */
+    padding: 16px; 
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
     font-family: 'DINNextLTPro', sans-serif;
     background-color: #F5F7FA;
-    height: 50px; /* Alternatively, set a specific height */
+    height: 50px; 
 }
 
 
@@ -263,6 +263,23 @@
     background-color: transparent;
     z-index: 2;
 }
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4c1bfc;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes progress-bar-animation {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
 
 .slide-progress {
     width: 100%;

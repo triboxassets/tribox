@@ -30,7 +30,7 @@ const slides = [
     image: slide3Image,
     heading: "I'm testin' something.",
     description:
-      "Ah yes, let's start by checking if the paragraph come through fine. Yes they do, baby girl. Looking mad spicy. Time to check if Emojis work/look good in this paragraph. ❤️‍🩹👿. Ummmm, yeah it does bad bois. Let's get this show on the road.",
+      "Ah yes, let's start by checking if the paragraph comes through fine. Yes they do, baby girl. Looking mad spicy. Time to check if Emojis work/look good in this paragraph. ❤️‍🩹👿. Ummmm, yeah it does bad bois. Let's get this show on the road.",
     credit: "Photo by Jane Smith",
   },
   {
@@ -53,26 +53,33 @@ const LoginPage: React.FC = () => {
     'Create-Account': null,
   });
 
-  // Slideshow logic
+  // Slideshow and progress bar logic
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 10000); // Change slide every 5 seconds
+    const slideDuration = 10000; // 10 seconds per slide
+    const startSlideShow = () => {
+      const interval = setInterval(() => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      }, slideDuration);
 
-    const progressInterval = setInterval(() => {
-      setProgress((prevProgress) => {
-        if (prevProgress >= 100) {
-          setProgress(0); // Reset progress after 100%
-          return 0;
-        }
-        return prevProgress + 2; // Increase progress by 2% every 100ms
-      });
-    }, 500); // Update progress every 100ms
-
-    return () => {
-      clearInterval(interval); // Cleanup slide interval
-      clearInterval(progressInterval); // Cleanup progress interval
+      return interval;
     };
+
+    const startProgress = () => {
+      const startTime = performance.now();
+      const updateProgress = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const percentage = (elapsed % slideDuration) / slideDuration;
+
+        setProgress(percentage * 100);
+        requestAnimationFrame(updateProgress);
+      };
+      requestAnimationFrame(updateProgress);
+    };
+
+    const slideInterval = startSlideShow();
+    startProgress();
+
+    return () => clearInterval(slideInterval); // Cleanup interval on unmount
   }, []);
 
   useEffect(() => {
@@ -115,7 +122,6 @@ const LoginPage: React.FC = () => {
           <span className="photo-credit">{slides[currentSlide].credit}</span>
         </div>
         
-        {/* Progress bar for slideshow */}
         <div className="progress-container">
           <progress className="slide-progress" value={progress} max="100"></progress>
         </div>
