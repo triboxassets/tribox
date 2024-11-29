@@ -25,7 +25,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .login-logo {
@@ -41,15 +41,22 @@
     position: absolute;
     bottom: 40px;
     left: 20px;
-    right: 20px;
+    right: auto;  /* Remove right constraint */
     z-index: 1;
     font-family: 'DINNextLTPro', sans-serif;
+    text-align: left;  /* Align text to the left */
+    color: #D1D1D1;
+    width: auto;  /* Do not reduce width of h1 */
+    max-width: 500px; /* Optional: Set a max-width to prevent it from getting too large */
+    padding: 10px; /* Optional: Add padding for better spacing */
 }
 
 .login-text-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 64px;  /* Slightly reduce font size */
     font-family: 'DINNextLTPro', sans-serif;
+    width: 100%;  /* Make sure h1 takes up full width */
+    line-height: 1;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Add text shadow */
 }
 
 .photo-credit {
@@ -66,6 +73,7 @@
     flex-direction: column;
     font-family: 'DINNextLTPro', sans-serif;
 }
+
 
 .login-bar-container {
     position: relative;
@@ -241,4 +249,40 @@
 .social-button img {
     width: 20px;
     height: 20px;
+}
+
+
+.progress-container {
+    position: absolute;
+    bottom: 0; 
+    width: 100%; 
+    height: 4px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.slide-progress {
+    width: 100%;
+    height: 100%; 
+    border-radius: 0; 
+    overflow: hidden;
+    appearance: none; 
+}
+
+.slide-progress::-webkit-progress-bar {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.slide-progress::-webkit-progress-value {
+    background-color: #4c1bfc;
+    border-radius: 0;
+}
+
+.slide-progress::-moz-progress-bar {
+    background-color: #4c1bfc; 
+    border-radius: 0; 
 }
