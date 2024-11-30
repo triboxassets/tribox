@@ -1,44 +1,148 @@
-    /* Right section styling */
-    .details-right {
-        flex: 1; /* Occupies less space */
-        background-color: #222;
-        padding: 20px;
-        border-radius: 12px;
-        color: white;
-        font-family: 'DINNextLTPro', sans-serif;
-        font-size: 12px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-      }
-      
-      /* Right section list */
-      .details-right ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 8px; /* Add space between list items */
-      }
-  /* Specifications title */
-  .details-right h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: var(--accent-color);
-  }
-  
-  /* Specification list items */
-  .details-right ul li {
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .details-right ul li strong {
-    color: white;
-  }
-  
-  .details-right ul li span {
-    color: #ccc;
+.product-specs-container {
+  color: white;
+  padding: 20px;
+  border: 2px solid white;
+  width: 100%;
+  text-align: left;
+  font-family: 'DINNextLTPro', sans-serif; /* Updated font */
+}
+
+.specs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced gap for more compact sections */
+}
+
+.formats-available h3, .product-id h3, .software-used h3, .includes-section h3, .licence-section h3 {
+  font-size: 18px; /* Increased font size for headers */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: #fff; /* Use white for headings */
+  font-weight: bold; /* Match bold styling from Code 1 */
+}
+
+.format-buttons {
+  display: flex;
+  gap: 12px; /* Consistent gap across the design */
+}
+
+.format-btn {
+  background-color: #444; /* Updated to match Code 1 button colors */
+  color: white;
+  border: 1px solid white;
+  padding: 6px 12px; /* Match button padding from Code 1 */
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners like in Code 1 */
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transitions */
+}
+
+.format-btn:hover {
+  background-color: #e63946; /* Hover color effect */
+}
+
+.product-id p, .model-stat p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ccc; /* Light gray text for secondary info */
+}
+
+.software-used .software-logos {
+  display: flex;
+  gap: 10px;
+}
+
+.model-info {
+  display: flex;
+  gap: 30px;
+}
+
+.model-stat h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+}
+
+.model-stat p {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff; /* Consistent white text */
+}
+
+.includes-section .includes-icons {
+  display: flex;
+  gap: 12px; /* Consistent gap for icons */
+}
+
+.licence-section p {
+  font-size: 12px;
+  color: #ccc; /* Light text color for less important text */
+  margin-top: 5px;
+  max-width: 90%;
+}
+
+.licence-section h3 {
+  font-size: 16px; /* Adjusted font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 12px;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: white;
+  color: black;
+  border: 1px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #e63946;
+  color: white;
+  border: 1px solid #e63946;
+}
+
+.btn-secondary:hover {
+  background-color: #e45e69;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-specs-container {
+    padding: 15px;
   }
 
+  .model-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .format-buttons, .software-logos, .includes-icons {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

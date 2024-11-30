@@ -1,4 +1,8 @@
-
+.product-details-specifications-container {
+  display: flex;
+  gap: 40px; /* Adjust the space between specifications and details */
+  padding: 40px;
+}
   
   /* Back button container styling */
   .back-button-container {
@@ -51,4 +55,5 @@
     height: auto;
     border-radius: 5px;
   }
+
   

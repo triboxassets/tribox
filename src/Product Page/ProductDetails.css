@@ -1,19 +1,10 @@
-/* Main product details container */
-.product-details {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  width: 50%;
-  margin: 10;
-  gap: 16px;
-  transition: all 0.3s ease;
-}
 
 /* Left section styling */
 .details-left {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width:100%;
   flex: 2;
   color: white;
   font-family: 'DINNextLTPro', sans-serif;
@@ -99,6 +90,56 @@
   margin-top: 16px; /* Add space before the description */
 }
 
+/* Tags Section */
+.ProductDetails-tags {
+  margin-top: 20px;
+}
+
+.ProductDetails-tags h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+/* Tags container */
+.tags-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* Allows tags to wrap to next line if necessary */
+}
+
+/* Individual tag styling */
+.ProductDetails-tag {
+  background-color: #444; /* Dark background for the tag */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px; /* Rounded edges */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for tags */
+.ProductDetails-tag:hover {
+  background-color: #e63946;
+}
+
+/* Link styling for "Download this listing as a cool poster" */
+.download-poster-link a {
+  color: #e63946; /* Red color for the link */
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for the link */
+.download-poster-link a:hover {
+  color: #ff6f61; /* Slightly lighter red on hover */
+}
+
 /* Buttons */
 .btn {
   margin-top: 12px;
@@ -140,7 +181,7 @@
 /* Headings */
 .details-left h1 {
   font-family: 'ThickThinks';
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 100;
   color: white;
   line-height: 1.2;

@@ -16,6 +16,9 @@ const ProductDetails: React.FC = () => {
     For more information, visit [our website](https://example.com)
     `;
 
+    // Dummy tags data
+    const tags = ["3D Models", "GLTF", "Rendering", "Textures"];
+
     return (
       <div className="product-details">
         <div className="details-left">
@@ -41,6 +44,24 @@ const ProductDetails: React.FC = () => {
           <div className="description">
             <ReactMarkdown>{description}</ReactMarkdown> {/* Render Markdown description */}
           </div>
+          
+          {/* Tags Section */}
+          <div className="ProductDetails-tags">
+            <h3>Tags:</h3>
+            <div className="tags-container">
+              {tags.map((tag, index) => (
+                <span key={index} className="ProductDetails-tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Download Poster Link */}
+          <div className="download-poster-link">
+            <a href="https://example.com/download" target="_blank" rel="noopener noreferrer">
+              Download this listing as a cool poster
+            </a>
+          </div>
+
           <button className="btn btn-primary">Download for Free</button>
           <button className="btn btn-secondary">Buy now for $30</button>
         </div>
