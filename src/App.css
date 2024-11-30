@@ -49,6 +49,14 @@
 /* Google Fonts - DM Serif Display */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@100;300;400;700&display=swap');
 
+@font-face {
+  font-family: 'ThickThinks';
+  src: url('../src/Assets/fonts/Thick Thinks.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* Using the font in the App */
 .App {
   text-align: center;

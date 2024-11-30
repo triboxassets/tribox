@@ -1,0 +1,161 @@
+/* Main product details container */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 50%;
+  margin: 10;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Left section styling */
+.details-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 2;
+  color: white;
+  font-family: 'DINNextLTPro', sans-serif;
+  text-align: left;
+}
+
+/* Rating box styling */
+.custom-rating-box {
+  display: inline-flex; /* Ensures proper alignment */
+  align-items: center; /* Vertically aligns icon and text */
+  font-family: 'DINNextLTPro', sans-serif;
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  padding: 4px 10px; /* Adds space inside the box */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 18px; /* Consistent font size */
+  gap: 6px; /* Space between the icon and text */
+}
+
+/* Star icon styling */
+.star-icon {
+  fill: #ffd700; /* Fill color for the star */
+  width: 24px; /* Icon width */
+  height: 24px; /* Icon height */
+}
+
+/* Author and Upload Date container */
+.author-upload {
+  display: flex;
+  justify-content: space-between; /* Aligns the Author and Upload Date to left and right */
+  gap: 40px; /* Adjust the space between the left and right sections */
+}
+
+/* Author section */
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Author info - Image and Name */
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Adjust space between image and name */
+}
+
+/* Author image styling */
+.author-image {
+  width: 40px; /* Set width and height of the circle */
+  height: 40px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+/* Headings for Author and Upload Date */
+.author h3, .upload-date h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.author p, .upload-date p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Upload Date section */
+.upload-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align the Upload Date text to the right */
+}
+
+/* Buttons */
+.btn {
+  margin-top: 12px;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: white;
+  color: black;
+  border: 1px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #e63946;
+  color: white;
+  border: 1px solid #e63946;
+}
+
+.btn-secondary:hover {
+  background-color: #e45e69;
+  color: #ffffff;
+}
+
+/* Headings */
+.details-left h1 {
+  font-family: 'ThickThinks';
+  font-size: 48px;
+  font-weight: 100;
+  color: white;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.details-left h1:hover {
+  color: var(--accent-color);
+}
+
+.details-left p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+  }
+
+  .author-upload {
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between author and upload date when in column layout */
+  }
+}
