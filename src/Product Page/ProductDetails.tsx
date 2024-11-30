@@ -1,8 +1,21 @@
 import React from 'react';
 import './ProductDetails.css'; 
 import { ReactComponent as StarIcon } from '../Assets/Star.svg'; // Import the star.svg as a React component
+import ReactMarkdown from 'react-markdown'; // Import react-markdown to parse markdown content
 
 const ProductDetails: React.FC = () => {
+    const description = `
+    # Lorem Ipsum
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    
+    ## Features
+    - Easy to use
+    - Lightweight
+    - High quality
+
+    For more information, visit [our website](https://example.com)
+    `;
+
     return (
       <div className="product-details">
         <div className="details-left">
@@ -25,9 +38,9 @@ const ProductDetails: React.FC = () => {
               <p>6/14/2024</p>
             </div>
           </div>
-          <p className="description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry...
-          </p>
+          <div className="description">
+            <ReactMarkdown>{description}</ReactMarkdown> {/* Render Markdown description */}
+          </div>
           <button className="btn btn-primary">Download for Free</button>
           <button className="btn btn-secondary">Buy now for $30</button>
         </div>

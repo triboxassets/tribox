@@ -90,6 +90,15 @@
   align-items: flex-end; /* Align the Upload Date text to the right */
 }
 
+/* Description styling */
+.description {
+  font-family: 'DINNextLTPro', sans-serif; /* Default font */
+  font-size: 14px; /* Font size for the description */
+  line-height: 1.6; /* Line height for readability */
+  color: #ccc; /* Light text color */
+  margin-top: 16px; /* Add space before the description */
+}
+
 /* Buttons */
 .btn {
   margin-top: 12px;
