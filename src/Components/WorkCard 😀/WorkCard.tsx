@@ -189,8 +189,8 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
         )}
       </div>
 
-      <div className="rating-badge">
-        <FontAwesomeIcon icon={faStar} className="star-icon" /> {rating}
+      <div className="card-rating-badge">
+        <FontAwesomeIcon icon={faStar} className="card-star-icon" /> {rating}
       </div>
 
       <h3 className="work-card-title">{productData?.title}</h3>

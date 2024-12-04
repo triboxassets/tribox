@@ -27,7 +27,6 @@ const LoginPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Dark mode toggle icon */}
       <div className="dark-mode-toggle" onClick={toggleDarkMode}>
         {darkMode ? <UilSun /> : <UilMoon />} {/* Toggle between moon and sun icons */}
       </div>

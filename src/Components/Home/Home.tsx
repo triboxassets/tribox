@@ -10,8 +10,6 @@ import HeartIcon from '../../Assets/heart.svg';
 import Triboxgreen from '../../Assets/Triboxgreen.png';
 import dummyhomecollection from '../../dummyhomecollection.json';
 import './Home.css';
-
-// Importing Unicons
 import { UilCube, UilImages, UilFile, UilMusic, UilCamera, Uil0Plus, UilFont } from '@iconscout/react-unicons';
 
 const Home = () => {
@@ -37,7 +35,19 @@ const Home = () => {
     { imageSrc: require('../../Assets/car1.png'), title: 'Car 1', description: 'Description of Car 1', buttonText: 'View Details' },
     { imageSrc: require('../../Assets/car2.png'), title: 'Car 2', description: 'Description of Car 2', buttonText: 'View Details' },
     { imageSrc: require('../../Assets/car3.png'), title: 'Car 3', description: 'Description of Car 3', buttonText: 'View Details' },
-    // Add more work items here...
+    { imageSrc: require('../../Assets/car4.png'), title: 'Car 4', description: 'Description of Car 4', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car5.png'), title: 'Car 5', description: 'Description of Car 5', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car6.png'), title: 'Car 6', description: 'Description of Car 6', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car7.png'), title: 'Car 7', description: 'Description of Car 7', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car8.png'), title: 'Car 8', description: 'Description of Car 8', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car9.png'), title: 'Car 9', description: 'Description of Car 9', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car10.png'), title: 'Car 10', description: 'Description of Car 10', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car11.png'), title: 'Car 11', description: 'Description of Car 11', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car12.png'), title: 'Car 12', description: 'Description of Car 12', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car13.png'), title: 'Car 13', description: 'Description of Car 13', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car14.png'), title: 'Car 14', description: 'Description of Car 14', buttonText: 'View Details' },
+    { imageSrc: require('../../Assets/car15.png'), title: 'Car 15', description: 'Description of Car 15', buttonText: 'View Details' },
+    
   ];
 
   const trendingTags = [
@@ -117,7 +127,7 @@ const Home = () => {
       <div className="infinite-scroll-container">
         <div className="loop-slider">
           <div className="inner">
-            {works.map((work, index) => (
+          {works.map((work, index) => (
               <img key={index} src={work.imageSrc} alt={work.title} className="scroll-image" />
             ))}
             {works.map((work, index) => (
@@ -130,11 +140,11 @@ const Home = () => {
       <div className="infinite-scroll-container second-carousel">
         <div className="loop-slider">
           <div className="inner">
-            {works.map((work, index) => (
-              <img key={`second-${index}`} src={work.imageSrc} alt={work.title} className="scroll-image" />
+          {works.map((work, index) => (
+              <img key={index} src={work.imageSrc} alt={work.title} className="scroll-image" />
             ))}
             {works.map((work, index) => (
-              <img key={`second-${index + works.length}`} src={work.imageSrc} alt={work.title} className="scroll-image" />
+              <img key={index + works.length} src={work.imageSrc} alt={work.title} className="scroll-image" />
             ))}
           </div>
         </div>

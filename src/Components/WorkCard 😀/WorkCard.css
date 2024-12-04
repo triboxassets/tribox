@@ -120,7 +120,7 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.rating-badge {
+.card-rating-badge {
   background-color: var(--accent-color);
   color: black;
   font-family: 'DINNextLTPro', sans-serif;
@@ -128,14 +128,19 @@
   padding: 2.04px 5.1px; /* Slightly increased padding */
   font-size: 10.2px; /* Slightly increased font size */
   font-weight: 700;
-  display: inline-block;
-  white-space: nowrap;
   text-align: center;
   max-width: 51px; /* Slightly increased max width */
+  max-height: 25px;
   overflow: hidden; 
   text-overflow: ellipsis;
   transition: background-color 0.3s;
 }
+
+.card-star-icon {
+  width: 18px; /* Icon width */
+  height: 18px; /* Icon height */
+}
+
 
 /* Tag styles */
 .work-card-tags {
