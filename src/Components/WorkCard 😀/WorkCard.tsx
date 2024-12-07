@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import './WorkCard.css';
-import dummyhomecollection from '../../dummyhomecollection.json';
+import dummyhomecollection from '../../dummydatabase.json';
+import PanIcon from '../../Assets/pan.svg';
 
 interface WorkCardProps {
   productId: string;
@@ -151,6 +152,10 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
         return '#FFBE0B';
       default:
         return '#61E294';
+      case 'Template':
+        return '#A0ECD0'; 
+      case 'Photos':
+        return '#E5C1BD';  
     }
   };
 
@@ -172,6 +177,11 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
             className="work-card-image"
             onMouseMove={handleMouseMove}
           >
+            <img 
+              src={PanIcon} 
+              alt="Pan Icon" 
+              className="work-card-pan-icon" 
+            />
             {images.length > 0 && (
               <img
                 src={images[currentImageIndex]}

@@ -1,0 +1,65 @@
+.container {
+  text-align: left;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.search-heading {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 37px; 
+}
+
+.query-text {
+  font-size: 84px;
+  font-weight: 700;
+  margin-top: 0;
+  line-height: 88px; 
+}
+
+.gradient-text {
+  background: conic-gradient(#F0555B, #F0555D, #F0625D, #F28B78, #F26E66, #F26567);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes the text transparent to reveal gradient */
+}
+
+.query-line {
+  width: 100%; /* Full width of the container */
+  max-width: 50px; /* Optional: Limit the width of the line */
+  height: 1px; /* Thickness of the line */
+  background-color: #ED254E; /* Line color */
+  margin: 80px 0 0; /* Adjust spacing above and below */
+  border-radius: 2px; /* Optional: Add rounded corners to the line */
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.no-results {
+  font-size: 18px;
+  color: #999;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.product-type-section {
+  margin-top: 40px;
+}
+
+.product-type-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  border-left: 4px solid #ED254E; /* Customize color as needed */
+  padding-left: 10px;
+}
+
+.product-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}

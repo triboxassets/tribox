@@ -3,29 +3,28 @@ import './ProductDetails.css';
 import { ReactComponent as StarIcon } from '../Assets/Star.svg'; // Import the star.svg as a React component
 import ReactMarkdown from 'react-markdown'; // Import react-markdown to parse markdown content
 
-const ProductDetails: React.FC = () => {
-    const description = `
-    # Lorem Ipsum
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    
-    ## Features
-    - Easy to use
-    - Lightweight
-    - High quality
+interface ProductDetailsProps {
+  product: {
+    title: string;
+    descriptionHtml: string;
+    metafields: { key: string; value: string }[];
+    tags: string[];
+  };
+}
 
-    For more information, visit [our website](https://example.com)
-    `;
-
-    // Dummy tags data
-    const tags = ["3D Models", "GLTF", "Rendering", "Textures"];
+const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
+    const { title, descriptionHtml, metafields, tags } = product;
+    const rating = metafields.find((field) => field.key === 'rating')?.value || 'N/A';
+    const uploadDate = metafields.find((field) => field.key === 'upload_date')?.value || 'Unknown';
+    const author = metafields.find((field) => field.key === 'author')?.value || 'Unknown';
 
     return (
       <div className="product-details">
         <div className="details-left">
-          <h1>Product Name — Lorem Ipsum</h1>
+          <h1>{title}</h1>
           <p className="rating">
             <span className="custom-rating-box">
-              <StarIcon className="star-icon" /> 4.3
+              <StarIcon className="star-icon" /> {rating}
             </span>
           </p>
           <div className="author-upload">
@@ -33,16 +32,16 @@ const ProductDetails: React.FC = () => {
               <h3>Author</h3>
               <div className="author-info">
                 <img className="author-image" src="../Assets/profile.png" alt="Author" />
-                <p>Abbas Raza</p>
+                <p>{author}</p>
               </div>
             </div>
             <div className="upload-date">
               <h3>Upload Date</h3>
-              <p>6/14/2024</p>
+              <p>{uploadDate}</p>
             </div>
           </div>
           <div className="description">
-            <ReactMarkdown>{description}</ReactMarkdown> {/* Render Markdown description */}
+            <ReactMarkdown>{descriptionHtml}</ReactMarkdown> {/* Render HTML description */}
           </div>
           
           {/* Tags Section */}

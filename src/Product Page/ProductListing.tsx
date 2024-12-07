@@ -3,12 +3,18 @@ import Navbar from '../Components/Navbar ⬆️/Navbar.tsx';
 import Footer from '../Components/Footer 🦶🏼/Footer.tsx';
 import PreviewWindow from './Previewwindow.tsx';
 import ProductDetails from './ProductDetails.tsx';
-import ProductSpecifications from './ProductSpecifications.tsx'; // Import the new component
+import ProductSpecifications from './ProductSpecifications.tsx';
 import './ProductListing.css';
 import BackArrow from '../Assets/back_arrow.svg';
+import dummydatabase from '../dummydatabase.json'; // Assuming the JSON file is in the same folder
+import { useParams } from 'react-router-dom'; // For extracting the dynamic productId
 
 const ProductListing = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [product, setProduct] = useState<any>(null);
+
+  // Get the productId from the route
+  const { productId } = useParams<{ productId: string }>();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +28,12 @@ const ProductListing = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Fetch product data based on the dynamic productId
+  useEffect(() => {
+    const productData = dummydatabase.find((item) => item.id === productId);
+    setProduct(productData);
+  }, [productId]);
 
   return (
     <div className="product-listing">
@@ -45,7 +57,7 @@ const ProductListing = () => {
 
         {/* Product Details and Specifications in the same container */}
         <div className="product-details-specifications-container">
-          <ProductDetails />
+          {product && <ProductDetails product={product} />} {/* Pass product data to ProductDetails */}
           <ProductSpecifications />
         </div>
       </div>

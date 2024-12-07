@@ -1,0 +1,265 @@
+.search-bar {
+    position: relative;
+    width: auto; 
+    max-width: 1161px; 
+    margin: 40px auto; 
+    padding: 13px 45px;
+    background: #0D0C12;
+    box-shadow: 0px 0px 98px 16px #b83a4d;
+    border-radius: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes pulseGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .search-bar::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: conic-gradient(
+      from 211deg,
+      #0073ff 0deg, 
+      #ff7300 45deg,  
+      #04b8ff 90deg,
+      #ffc60a 135deg,
+      #a856ff 180deg,
+      #1dff6c 225deg,
+      #ff5f0e 270deg,
+      #7300ff 360deg  
+    );
+    background-size: 200% 200%; 
+    animation: pulseGradient 2.5s ease infinite; 
+    border-radius: 35px;
+    z-index: -1; 
+  }
+  
+  
+  
+  .search-container {
+    width: 1161px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-category {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+  }
+  
+  .search-category span {
+    color: #F0555B;
+    font-size: 36.81px;
+    font-family: 'DINNextLTPro', sans-serif;
+    font-weight: 300;
+  }
+  
+  .search-gradient {
+    width: 20px;
+    height: 11px;
+    background: conic-gradient(
+      from 211deg at 31.38% 122.71%,
+      #F0555B 0deg,
+      #F0555D 59deg,
+      #F0625D 142deg,
+      #F28B78 212deg,
+      #F26E66 296deg,
+      #F26567 360deg
+    );
+  }
+  
+  .search-icon-container {
+    width: 70.62px;
+    height: 69.61px;
+    background: #5A1720;
+    border-radius: 10.09px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .search-icon {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    left: 16.12px;
+    top: 18.81px;
+  }
+  
+  .search-input {
+    margin-left: 5px;
+    padding: 8px 12px;
+    font-size: 36.81px;
+    width: 600px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none; 
+  }
+  
+  .search-input:focus {
+    border: none; 
+    outline: none;
+  }
+
+  .category-label {
+    display: flex;
+    align-items: center;
+    color: #F0555B;
+    font-size: 36.81px;
+    font-family: 'DINNextLTPro', sans-serif;
+    font-weight: 300;
+  }
+
+  .category-label svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .arrow-icon.open {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0D0C12;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  list-style: none;
+  margin-top: 5px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #5A1720;
+}
+
+.dropdown-item svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+/* Suggestions section */
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0D0C12;
+  border-radius: 0 0 29px 29px;
+  padding: 10px;
+  width: 100%;
+  max-width: 1161px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0px 0px 2px 1px #b83a4d;
+  z-index: 10;
+  list-style: none;
+  
+  /* Clip scrollbar to border-radius */
+  clip-path: inset(0 0 0 0 round 0 0 29px 29px);
+}
+
+/* Custom scrollbar for Webkit browsers */
+.suggestions-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb {
+  background: #5A1720;
+  border-radius: 5px;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb:hover {
+  background: #800000; 
+}
+
+.suggestions-list::-webkit-scrollbar-track {
+  background: rgb(47, 47, 48); 
+  border-radius: 5px;
+}
+
+.suggestions-list::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Custom scrollbar for Firefox */
+.suggestions-list {
+  scrollbar-width: thin;
+  scrollbar-color: #5A1720 #1c1a26; /* Inner bar and track for Firefox */
+}
+
+/* Suggestion Item */
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: transparent;
+  border-bottom: 1px solid #2C2C2E;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #5A1720;
+  transform: scale(1.02);
+}
+
+.suggestion-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.suggestion-text h4 {
+  font-size: 16px;
+  color: #fff;
+  margin: 0 0 5px;
+}
+
+.suggestion-text p {
+  font-size: 14px;
+  color: #B3B3B3;
+  margin: 0;
+}

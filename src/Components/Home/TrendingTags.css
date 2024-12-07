@@ -1,0 +1,32 @@
+.trending-searches {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px; 
+    padding: 10px 0 20px 0; 
+  }
+  
+  .trending-searches-header {
+    color: white;
+    font-size: 24px;
+    font-family: 'DIN Next LT Pro', sans-serif;
+    font-weight: 400;
+    margin-right: 20px; 
+  }
+
+  .tag {
+    padding: 6px 12px; 
+    border-radius: 16px; 
+    border: 4px solid; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tag-text {
+    color: white;
+    font-size: 18px; 
+    font-family: 'DIN Next LT Pro', sans-serif;
+    font-weight: 400;
+  }

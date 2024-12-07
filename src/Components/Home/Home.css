@@ -80,174 +80,6 @@ button {
 }
 
 
-
-.search-bar {
-  position: relative;
-  width: auto; 
-  max-width: 1161px; 
-  margin: 40px auto; 
-  padding: 13px 45px;
-  background: #0D0C12;
-  box-shadow: 0px 0px 98px 16px #b83a4d;
-  border-radius: 29px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-@keyframes pulseGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.search-bar::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background: conic-gradient(
-    from 211deg,
-    #0073ff 0deg, 
-    #ff7300 45deg,  
-    #04b8ff 90deg,
-    #ffc60a 135deg,
-    #a856ff 180deg,
-    #1dff6c 225deg,
-    #ff5f0e 270deg,
-    #7300ff 360deg  
-  );
-  background-size: 200% 200%; 
-  animation: pulseGradient 2.5s ease infinite; 
-  border-radius: 35px;
-  z-index: -1; 
-}
-
-
-
-.search-container {
-  width: 1161px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.search-category {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-}
-
-.search-category span {
-  color: #F0555B;
-  font-size: 36.81px;
-  font-family: 'DINNextLTPro', sans-serif;
-  font-weight: 300;
-}
-
-.search-gradient {
-  width: 20px;
-  height: 11px;
-  background: conic-gradient(
-    from 211deg at 31.38% 122.71%,
-    #F0555B 0deg,
-    #F0555D 59deg,
-    #F0625D 142deg,
-    #F28B78 212deg,
-    #F26E66 296deg,
-    #F26567 360deg
-  );
-}
-
-.search-icon-container {
-  width: 70.62px;
-  height: 69.61px;
-  background: #5A1720;
-  border-radius: 10.09px;
-  position: relative;
-  overflow: hidden;
-}
-
-.search-icon {
-  width: 34px;
-  height: 34px;
-  position: absolute;
-  left: 16.12px;
-  top: 18.81px;
-}
-
-.search-input {
-  margin-left: 5px;
-  padding: 8px 12px;
-  font-size: 36.81px;
-  width: 600px;
-  background: transparent;
-  color: #fff;
-  border: none;
-  outline: none; 
-}
-
-.search-input:focus {
-  border: none; 
-  outline: none;
-}
-
-
-
-
-.trending-searches {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 16px; 
-  padding: 10px 0 20px 0; 
-}
-
-.trending-searches-header {
-  color: white;
-  font-size: 24px;
-  font-family: 'DIN Next LT Pro', sans-serif;
-  font-weight: 400;
-  margin-right: 20px; 
-}
-
-.tags-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.tag {
-  padding: 6px 12px; 
-  border-radius: 16px; 
-  border: 4px solid; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tag-text {
-  color: white;
-  font-size: 18px; 
-  font-family: 'DIN Next LT Pro', sans-serif;
-  font-weight: 400;
-}
-
-
-
 .banner-container {
   display: flex;
   justify-content: center; 
@@ -313,6 +145,7 @@ button {
   margin: 0 auto; 
 }
 
+/* Tribox Button Styling */
 .tribox-button {
   width: 160px; 
   height: 50px; 
@@ -322,6 +155,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 10px 15px; 
+  transition: all 0.3s ease; /* Smooth transition on hover */
 }
 
 .tribox-button-inner {
@@ -334,16 +168,31 @@ button {
   width: 20px; 
   height: 20px; 
   background-color: transparent; 
+  transition: color 0.3s ease; /* Smooth transition for icon color */
 }
 
 .tribox-button-text {
   font-size: 18px;
-  font-weight: 200; 
+  font-weight: 500; 
   color: black; 
   text-align: center;
   font-family: 'DINNextLTPro', sans-serif;
-  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth transition for text color */
 }
+
+/* Hover effect */
+.tribox-button:hover {
+  background: #4c1bfc; /* Change background to red */
+}
+
+.tribox-button:hover .tribox-button-text {
+  color: white; /* Change text color to white on hover */
+}
+
+.tribox-button:hover .tribox-button-icon {
+  color: white; /* Change icon color to white on hover */
+}
+
 
 .tribox-image-container {
   display: flex;

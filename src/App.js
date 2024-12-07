@@ -5,6 +5,7 @@ import LoginPage from './Components/Login/LoginPage.tsx'; // Import the LoginPag
 import ForgotPasswordForm from './Components/Login/ForgotPasswordForm.tsx';
 import ProductListing from './Product Page/ProductListing.tsx'; // Import the ProductListing component
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SearchResults from './Components/SearchBar 🔍/SearchResults.tsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/forgot-password" element={<ForgotPasswordForm />} />
             <Route path="/product-listing/:productId" element={<ProductListing />} /> {/* Product Listing Route */}
             <Route path="/" element={<Home />} />
+            <Route path="/searchresults" element={<SearchResults />} />
           </Routes>
         </Router>
       </div>

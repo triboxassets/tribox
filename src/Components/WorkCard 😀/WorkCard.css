@@ -141,6 +141,16 @@
   height: 18px; /* Icon height */
 }
 
+.work-card-pan-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+}
+
+
 
 /* Tag styles */
 .work-card-tags {

@@ -3,14 +3,15 @@ import Navbar from '../Navbar ⬆️/Navbar.tsx';
 import Snowflakes from '../Snowflakes ❄️/Snowflakes.tsx';
 import WorkCard from '../WorkCard 😀/WorkCard.tsx';
 import Footer from '../Footer 🦶🏼/Footer.tsx';
-import SearchIcon from '../../Assets/search.svg';
-import ArrowIcon from '../../Assets/arrow.svg';
 import Banner from '../../Assets/banner.svg';
 import HeartIcon from '../../Assets/heart.svg';
 import Triboxgreen from '../../Assets/Triboxgreen.png';
-import dummyhomecollection from '../../dummyhomecollection.json';
+import dummyhomecollection from '../../dummydatabase.json'; // Your full database
+import featureWorks from '../../FeatureWorks.json'; // Only contains the IDs of the cards to be shown
 import './Home.css';
 import { UilCube, UilImages, UilFile, UilMusic, UilCamera, Uil0Plus, UilFont } from '@iconscout/react-unicons';
+import SearchBar from '../SearchBar 🔍/SearchBar.tsx';
+import TrendingTags from '../Home/TrendingTags.tsx';
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 100); // Adjust the threshold as needed
+      setIsScrolled(scrollTop > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,7 +30,13 @@ const Home = () => {
     };
   }, []);
 
-  const productIds = dummyhomecollection.map((product) => product.id);
+  // Get the product IDs from FeatureWorks.json
+  const featuredProductIds = featureWorks.map((item) => item.id);
+
+  // Filter the products from dummyhomecollection based on the IDs from FeatureWorks.json
+  const filteredProducts = dummyhomecollection.filter((product) =>
+    featuredProductIds.includes(product.id)
+  );
 
   const works = [
     { imageSrc: require('../../Assets/car1.png'), title: 'Car 1', description: 'Description of Car 1', buttonText: 'View Details' },
@@ -47,16 +54,6 @@ const Home = () => {
     { imageSrc: require('../../Assets/car13.png'), title: 'Car 13', description: 'Description of Car 13', buttonText: 'View Details' },
     { imageSrc: require('../../Assets/car14.png'), title: 'Car 14', description: 'Description of Car 14', buttonText: 'View Details' },
     { imageSrc: require('../../Assets/car15.png'), title: 'Car 15', description: 'Description of Car 15', buttonText: 'View Details' },
-    
-  ];
-
-  const trendingTags = [
-    { name: 'models', background: '#0D0C12', borderColor: '#31121A' },
-    { name: '3d models', background: '#0D0C12', borderColor: '#31121A' },
-    { name: 'NFTs', background: '#ED254E', borderColor: '#31121A' },
-    { name: 'logo pack', background: '#0D0C12', borderColor: '#31121A' },
-    { name: 'dashboard', background: '#0D0C12', borderColor: '#31121A' },
-    { name: 'HDR', background: '#0D0C12', borderColor: '#31121A' },
   ];
 
   return (
@@ -70,34 +67,9 @@ const Home = () => {
             <h1 className="hero-title">
               Get <span className="hero-highlight">thousands of assets</span> for Any Project from a Broad Range of Categories.
             </h1>
-            <div className="search-bar">
-              <div className="search-container">
-                <div className="search-category">
-                  <span>All Items</span>
-                  <img src={ArrowIcon} alt="Arrow Icon" className="arrow-icon" />
-                  <input type="text" placeholder="What does your project need?" className="search-input" />
-                </div>
-                <div className="search-icon-container">
-                  <img src={SearchIcon} alt="Search Icon" className="search-icon" />
-                </div>
-              </div>
-            </div>
-            <section className="trending-searches">
-              <div className="trending-searches-header">
-                <span>Trending Searches</span>
-              </div>
-              <div className="tags-container">
-                {trendingTags.map((tag, index) => (
-                  <div
-                    key={index}
-                    className="tag"
-                    style={{ background: tag.background, borderColor: tag.borderColor }}
-                  >
-                    <span className="tag-text">{tag.name}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
+            {/* Use SearchBar component */}
+            <SearchBar />
+            <TrendingTags />
           </div>
         </div>
       </header>
@@ -127,7 +99,7 @@ const Home = () => {
       <div className="infinite-scroll-container">
         <div className="loop-slider">
           <div className="inner">
-          {works.map((work, index) => (
+            {works.map((work, index) => (
               <img key={index} src={work.imageSrc} alt={work.title} className="scroll-image" />
             ))}
             {works.map((work, index) => (
@@ -138,9 +110,9 @@ const Home = () => {
       </div>
 
       <div className="infinite-scroll-container second-carousel">
-        <div className="loop-slider">
+      <div className="loop-slider">
           <div className="inner">
-          {works.map((work, index) => (
+            {works.map((work, index) => (
               <img key={index} src={work.imageSrc} alt={work.title} className="scroll-image" />
             ))}
             {works.map((work, index) => (
@@ -189,8 +161,8 @@ const Home = () => {
 
       <div className="work-cards-container">
         <div className="work-cards-grid">
-          {productIds.map((id) => (
-            <WorkCard key={id} productId={id} buttonText="View Details" />
+          {filteredProducts.map((product) => (
+            <WorkCard key={product.id} productId={product.id} buttonText="View Details" />
           ))}
         </div>
       </div>
