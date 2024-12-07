@@ -35,6 +35,24 @@ const SearchResults = () => {
 
   const groupedResults = groupByProductType(filteredResults);
 
+  // Get category color
+  const getCategoryColor = (category: string): string => {
+    switch (category) {
+      case '3D Models':
+        return '#ED254E';
+      case 'Mockups':
+        return '#FFBE0B';
+      case 'Template':
+        return '#A0ECD0';
+      case 'Photos':
+        return '#E5C1BD';
+      case 'Fonts':
+        return '#61E294';
+      default:
+        return '#CCC'; // Default color for uncategorized or unknown types
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -50,7 +68,12 @@ const SearchResults = () => {
           {Object.keys(groupedResults).length > 0 ? (
             Object.entries(groupedResults).map(([productType, items]) => (
               <div key={productType} className="product-type-section">
-                <h3 className="product-type-heading">{productType}</h3>
+                <h3
+                  className="product-type-heading"
+                  style={{ borderColor: getCategoryColor(productType) }}
+                >
+                  {productType} <span className="result-count">({items.length} results)</span>
+                </h3>
                 <div className="product-type-grid">
                   {items.map((item) => (
                     <WorkCard

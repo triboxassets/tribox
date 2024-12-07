@@ -50,12 +50,18 @@
 }
 
 .product-type-heading {
-  font-size: 22px;
+  font-size: 82px;
   font-weight: 600;
   color: #333;
   margin-bottom: 20px;
   border-left: 4px solid #ED254E; /* Customize color as needed */
   padding-left: 10px;
+}
+
+.result-count {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666; /* Subdued text color for the count */
 }
 
 .product-type-grid {
