@@ -33,7 +33,7 @@ const SearchBar = () => {
     { name: "3D Models", icon: <UilCube /> },
     { name: "Mockups", icon: <UilImage /> },
     { name: "Templates", icon: <UilPicture /> },
-    { name: "Audio Samples", icon: <UilMusic /> },
+    { name: "Audio", icon: <UilMusic /> },
     { name: "Photos", icon: <UilCamera /> },
     { name: "Presentation Templates", icon: <UilPresentationEdit /> },
     { name: "Fonts", icon: <UilFont /> },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Add this import for Link
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import { ReactComponent as TriboxLogo } from '../../Assets/whitelogo.svg';
 import './Navbar.css';
 
@@ -13,12 +13,18 @@ const Navbar: React.FC<{ isScrolled: boolean }> = ({ isScrolled }) => (
         <div className="header-menu-items">
           {['Store', 'Destroy My Design', 'About', 'Artists'].map((text) => (
             <div key={text} className="header-menu-item">
-              {text}
+              {text === 'Artists' ? (
+                <Link to="/artists" className="menu-link">{/* Link to Artists */}
+                  {text}
+                </Link>
+              ) : (
+                text
+              )}
             </div>
           ))}
         </div>
         <div className="signin-button">
-          <Link to="/login"> {/* Link component to navigate to the login page */}
+          <Link to="/login">
             <span className="signin-text">Sign Up/Login</span>
           </Link>
         </div>

@@ -69,3 +69,69 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
+
+.end-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.end-text {
+  text-align: left;
+}
+
+.end-text h2 {
+  font-size: 48px; /* Increased font size */
+  font-weight: bold;
+  margin: 0;
+}
+
+.end-text h4 {
+  font-size: 28px; /* Larger font size */
+  font-weight: 400;
+  margin: 10px 0 0;
+  color: #dcdcdc;
+}
+
+.highlight-text {
+  color: #ED254E;
+  font-weight: bold;
+}
+
+.end-line {
+  width: 200px; /* Smaller width for the line */
+  height: 2px; /* Slightly thicker line */
+  background-color: #ED254E; /* Line color */
+  margin: 20px 0; /* Spacing around the line */
+  border-radius: 2px;
+}
+
+.end-image {
+  width: 420px; /* Increased image size */
+  height: auto;
+  object-fit: contain;
+  margin-left: 20px;
+}
+
+.go-to-store-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px; /* Matches the provided styling */
+  height: 40px; /* Matches the height */
+  padding: 0 20px; /* Horizontal padding for button content */
+  background-color: #ED254E; /* Red button color */
+  color: white; /* White text for contrast */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Button text size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 20px; /* Added margin to move the button downward */
+}
+
+.go-to-store-button:hover {
+  background-color: #D22243; /* Slightly darker red on hover */
+}

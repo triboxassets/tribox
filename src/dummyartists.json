@@ -1,0 +1,47 @@
+[
+    {
+      "fullName": "Katsushika Hokusai",
+      "nickname": "Hokusai",
+      "email": "hokusai@example.com",
+      "password": "hashedpassword123",
+      "occupation": "Traditional Artist",
+      "location": "Edo, Japan",
+      "proStatus": true,
+      "tags": ["traditional", "Japanese", "woodblock printing"],
+      "followers": 258000,
+      "artStyle": "Ukiyo-e",
+      "artIds": ["1"],
+      "biography": "One of Japan's most famous Ukiyo-e artists, known for works like 'The Great Wave off Kanagawa'.",
+      "profilePhoto": "/assets/hokusai_profile.png"
+    },
+    {
+      "fullName": "AutoDesign Studio",
+      "nickname": "AutoDesign",
+      "email": "autodesign@example.com",
+      "password": "hashedpassword456",
+      "occupation": "3D Artist",
+      "location": "Detroit, USA",
+      "proStatus": true,
+      "tags": ["3D", "modeling", "vehicles"],
+      "followers": 12500,
+      "artStyle": "Realistic 3D Modeling",
+      "artIds": ["2", "8"],
+      "biography": "A studio specializing in high-quality 3D models of vehicles and machinery.",
+      "profilePhoto": "/assets/autodesign_profile.png"
+    },
+    {
+      "fullName": "TemplateMasters",
+      "nickname": "TM",
+      "email": "templatemasters@example.com",
+      "password": "hashedpassword789",
+      "occupation": "Graphic Designer",
+      "location": "Berlin, Germany",
+      "proStatus": false,
+      "tags": ["templates", "business", "presentations"],
+      "followers": 8320,
+      "artStyle": "Business Presentation Design",
+      "artIds": ["3"],
+      "biography": "Creators of professional templates for presentations and business reports.",
+      "profilePhoto": "/assets/templatemasters_profile.png"
+    }
+]    

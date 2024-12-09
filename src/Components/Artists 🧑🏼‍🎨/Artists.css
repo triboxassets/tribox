@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'DINNextLTPro';
+  line-height: 1.6;
+  color: #fff;
+  background-color: #0D0C12;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+}
+
+.artists-container {
+  padding: 20px;
+  font-family: 'DINNextLTPro', sans-serif;
+  color: #fff;
+  background-color: #0D0C12;
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-button {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #4c1bfc;
+  color: white;
+}
+
+.filter-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-inputs input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 150px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.pro-designers {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.artists-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.artist-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #0D0C12;
+  color: #fff;
+}
+
+.artist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artist-header h3 {
+  margin: 0;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-size: 2rem;
+}
+
+.artist-header span {
+  background-color: #ED254E;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.artist-images {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.artist-images img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.artist-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.artist-tags span {
+  background-color: #ED254E;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.get-in-touch-button {
+  background-color: #4c1bfc;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.get-in-touch-button:hover {
+  background-color: #ED254E;
+  color: #fff;
+}
