@@ -56,6 +56,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Rische';
+  src: url('../src/Assets/fonts/rische-demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Using the font in the App */
 .App {

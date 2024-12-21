@@ -12,7 +12,7 @@
       "artStyle": "Ukiyo-e",
       "artIds": ["1"],
       "biography": "One of Japan's most famous Ukiyo-e artists, known for works like 'The Great Wave off Kanagawa'.",
-      "profilePhoto": "/assets/hokusai_profile.png"
+      "profilePhoto": "/assets/pfp01.png"
     },
     {
       "fullName": "AutoDesign Studio",
@@ -22,12 +22,12 @@
       "occupation": "3D Artist",
       "location": "Detroit, USA",
       "proStatus": true,
-      "tags": ["3D", "modeling", "vehicles"],
+      "tags": ["3D", "modeling", "Illustration"],
       "followers": 12500,
       "artStyle": "Realistic 3D Modeling",
       "artIds": ["2", "8"],
       "biography": "A studio specializing in high-quality 3D models of vehicles and machinery.",
-      "profilePhoto": "/assets/autodesign_profile.png"
+      "profilePhoto": "/assets/pfp02.png"
     },
     {
       "fullName": "TemplateMasters",
@@ -42,6 +42,6 @@
       "artStyle": "Business Presentation Design",
       "artIds": ["3"],
       "biography": "Creators of professional templates for presentations and business reports.",
-      "profilePhoto": "/assets/templatemasters_profile.png"
+      "profilePhoto": "/assets/pfp03.png"
     }
 ]    
