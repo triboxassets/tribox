@@ -5,7 +5,7 @@
 }
 
 body, html {
-  font-family: 'DINNextLTPro';
+  font-family: 'DINNextLTPro', sans-serif;
   line-height: 1.6;
   color: #fff;
   background-color: #0D0C12;
@@ -50,7 +50,7 @@ button {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Align content to the left */
   justify-content: center;
   padding: 20px;
   position: relative;
@@ -60,7 +60,7 @@ button {
 }
 
 .hero-content {
-  text-align: center;
+  text-align: left; /* Align text to the left */
   width: 80%; 
   max-width: 1000px; 
   margin: 0 auto;
@@ -102,44 +102,6 @@ button {
   width: 100%;
   max-width: 1200px;
   height: auto;
-}
-
-.tribox-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 40px 0;
-}
-
-.tribox-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-.tribox-content {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.tribox-header {
-  font-family: 'DINNextLTPro', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #fff;
-}
-
-.tribox-highlight {
-  color: #ED254E;
-}
-
-.tribox-description {
-  font-family: 'DINNextLTPro', sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: #fff;
-  max-width: 800px;
-  margin: 20px auto;
 }
 
 .featured-works-container {
@@ -192,25 +154,13 @@ button {
   height: auto; 
 }
 
-.menu-item:nth-child(6) {
-  width: auto; 
-  max-width: 200px; 
-  text-overflow: unset; 
-  white-space: normal; 
-  padding: 10px 12px; 
-}
-
-.menu-icon {
-  font-size: 42px;
-  margin-bottom: 12px; 
-  transition: color 0.3s ease;
-}
-
+.menu-item.active,
 .menu-item:hover {
   transform: scale(1.1); 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
+.menu-item.active:before,
 .menu-item:hover:before {
   content: '';
   position: absolute;
@@ -222,30 +172,37 @@ button {
   z-index: -1; 
 }
 
+.menu-item:nth-child(1).active,
 .menu-item:nth-child(1):hover {
   color: #ED254E; 
 }
 
+.menu-item:nth-child(2).active,
 .menu-item:nth-child(2):hover {
   color: #FFBE0B; 
 }
 
+.menu-item:nth-child(3).active,
 .menu-item:nth-child(3):hover {
   color: #A0ECD0; 
 }
 
+.menu-item:nth-child(4).active,
 .menu-item:nth-child(4):hover {
   color: #6610F2; 
 }
 
+.menu-item:nth-child(5).active,
 .menu-item:nth-child(5):hover {
   color: #E5C1BD; 
 }
 
+.menu-item:nth-child(6).active,
 .menu-item:nth-child(6):hover {
   color: #9ED0E6; 
 }
 
+.menu-item:nth-child(7).active,
 .menu-item:nth-child(7):hover {
   color: #61E294; 
 }
@@ -266,11 +223,11 @@ button {
     font-size: 2rem;
   }
 
-  .tribox-header {
-    font-size: 1.5rem;
+  .hero-content {
+    text-align: left;
   }
 
-  .tribox-description {
+  .hero-description {
     font-size: 1rem;
   }
 

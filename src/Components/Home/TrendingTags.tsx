@@ -1,30 +1,36 @@
-// TrendingTags.tsx
 import React from 'react';
-import './TrendingTags.css'; // Make sure to create this CSS file if it's not created
+import { useNavigate } from 'react-router-dom';
+import './TrendingTags.css';
 
 const trendingTags = [
-  { name: 'models', background: '#0D0C12', borderColor: '#31121A' },
-  { name: '3d models', background: '#0D0C12', borderColor: '#31121A' },
-  { name: 'NFTs', background: '#ED254E', borderColor: '#31121A' },
-  { name: 'logo pack', background: '#0D0C12', borderColor: '#31121A' },
-  { name: 'dashboard', background: '#0D0C12', borderColor: '#31121A' },
-  { name: 'HDR', background: '#0D0C12', borderColor: '#31121A' },
+  { name: 'models' },
+  { name: '3d models' },
+  { name: 'NFTs' },
+  { name: 'logo pack' },
+  { name: 'dashboard' },
+  { name: 'HDR' },
 ];
 
 const TrendingTags = () => {
+  const navigate = useNavigate();
+
+  const handleTagClick = (tagName: string) => {
+    navigate('/searchresults', { state: { searchQuery: tagName } });
+  };
+
   return (
-    <section className="trending-searches">
-      <div className="trending-searches-header">
+    <section className="trending-tags-searches">
+      <div className="trending-tags-header">
         <span>Trending Searches</span>
       </div>
-      <div className="tags-container">
+      <div className="trending-tags-container">
         {trendingTags.map((tag, index) => (
           <div
             key={index}
-            className="tag"
-            style={{ background: tag.background, borderColor: tag.borderColor }}
+            className="trending-tag"
+            onClick={() => handleTagClick(tag.name)}
           >
-            <span className="tag-text">{tag.name}</span>
+            <span className="trending-tag-text">{tag.name}</span>
           </div>
         ))}
       </div>

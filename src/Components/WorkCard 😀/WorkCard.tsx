@@ -93,7 +93,6 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
 
         model.position.sub(center);
 
-        //const aspect = renderer.domElement.clientWidth / renderer.domElement.clientHeight;
         const maxDim = Math.max(size.x, size.y, size.z);
         const distance = maxDim / (2 * Math.tan((Math.PI / 180) * camera.fov / 2));
         const fitOffset = 1.5;
@@ -150,12 +149,14 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
         return '#ED254E';
       case 'Mockups':
         return '#FFBE0B';
+      case 'Templates':
+        return '#A0ECD0';
+      case 'Photos':
+        return '#E5C1BD';
+      case 'Audio':
+        return '#61E294';
       default:
         return '#61E294';
-      case 'Template':
-        return '#A0ECD0'; 
-      case 'Photos':
-        return '#E5C1BD';  
     }
   };
 
@@ -167,7 +168,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
   return (
     <div
       className="work-card"
-      style={{ '--accent-color': accentColor } as React.CSSProperties}
+      style={{ '--accent-color': accentColor, borderColor: accentColor } as React.CSSProperties}
       onClick={handleCardClick}
     >
       <div className="work-card-image-container">

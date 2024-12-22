@@ -1,32 +1,61 @@
-.trending-searches {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 16px; 
-    padding: 10px 0 20px 0; 
-  }
-  
-  .trending-searches-header {
-    color: white;
-    font-size: 24px;
-    font-family: 'DIN Next LT Pro', sans-serif;
-    font-weight: 400;
-    margin-right: 20px; 
+/* Trending Tags Styling */
+.trending-tags-searches {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.trending-tags-header {
+  color: white;
+  font-size: 24px;
+  font-family: 'DIN Next LT Pro', sans-serif;
+  font-weight: 100;
+}
+
+.trending-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.trending-tag {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 2px solid #31121A;
+  background: #0D0C12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.trending-tag:hover {
+  background: #ED254E; /* Default hover color */
+  border-color: #ED254E; /* Default hover border color */
+}
+
+.trending-tag-text {
+  color: white;
+  font-size: 16px;
+  font-family: 'DIN Next LT Pro', sans-serif;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .trending-tags-header {
+    font-size: 20px;
   }
 
-  .tag {
-    padding: 6px 12px; 
-    border-radius: 16px; 
-    border: 4px solid; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .trending-tag {
+    padding: 6px 12px;
+    font-size: 14px;
   }
-  
-  .tag-text {
-    color: white;
-    font-size: 18px; 
-    font-family: 'DIN Next LT Pro', sans-serif;
-    font-weight: 400;
+
+  .trending-tag-text {
+    font-size: 14px;
   }
+}

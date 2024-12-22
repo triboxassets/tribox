@@ -3,8 +3,7 @@ import Navbar from '../Navbar ⬆️/Navbar.tsx';
 import WorkCard from '../WorkCard 😀/WorkCard.tsx';
 import Footer from '../Footer 🦶🏼/Footer.tsx';
 import Banner from '../../Assets/banner.svg';
-import Triboxgreen from '../../Assets/Triboxgreen.png';
-import dummyhomecollection from '../../dummydatabase.json'; // Your full database
+import dummyhomecollection from '../../dummydatabase.json';
 import featureWorks from '../../FeatureWorks.json'; // Only contains the IDs of the cards to be shown
 import './Home.css';
 import { UilCube, UilImages, UilFile, UilMusic, UilCamera, Uil0Plus, UilFont } from '@iconscout/react-unicons';
@@ -13,6 +12,8 @@ import TrendingTags from '../Home/TrendingTags.tsx';
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('All Items');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,13 +29,21 @@ const Home = () => {
     };
   }, []);
 
-    // Get the product IDs from FeatureWorks.json
-    const featuredProductIds = featureWorks.map((item) => item.id);
+  useEffect(() => {
+    // Filter the products based on featureWorks IDs
+    const filtered = dummyhomecollection.filter(product => featureWorks.some(fw => fw.id === product.id));
+    setFilteredProducts(filtered);
+  }, []);
 
-    // Filter the products from dummyhomecollection based on the IDs from FeatureWorks.json
-    const filteredProducts = dummyhomecollection.filter((product) =>
-      featuredProductIds.includes(product.id)
-    );
+  const handleCategoryClick = (category) => {
+    if (selectedCategory === category) {
+      setSelectedCategory('All Items');
+      setFilteredProducts(dummyhomecollection.filter(product => featureWorks.some(fw => fw.id === product.id)));
+    } else {
+      setSelectedCategory(category);
+      setFilteredProducts(dummyhomecollection.filter(product => featureWorks.some(fw => fw.id === product.id) && product.productType === category));
+    }
+  };
 
   return (
     <div className="home">
@@ -48,6 +57,9 @@ const Home = () => {
             <h1 className="hero-title">
               Get <span className="hero-highlight">thousands of assets</span> for Any Project from a Broad Range of Categories.
             </h1>
+            <p className="hero-description">
+              Discover and showcase amazing works from talented artists around the world.
+            </p>
             <SearchBar />
             <TrendingTags />
           </div>
@@ -58,49 +70,37 @@ const Home = () => {
         <img src={Banner} alt="Banner" className="banner" />
       </div>
 
-      <div className="tribox-container">
-        <img src={Triboxgreen} alt="Triboxgreen" className="tribox-image" />
-        <div className="tribox-content">
-          <div className="tribox-header">
-            What is <span className="tribox-highlight">Tribox?</span>
-          </div>
-          <p className="tribox-description">
-            Tribox is a platform where you can find a wide range of digital assets for your projects. From 3D models to templates, we have it all.
-          </p>
-        </div>
-      </div>
-
       <div className="featured-works-container">
         <h2 className="featured-works-title">FEATURED WORKS</h2>
       </div>
 
       <div className="menu-container">
         <ul className="menu">
-          <li className="menu-item">
+          <li className={`menu-item ${selectedCategory === '3D Models' ? 'active' : ''}`} onClick={() => handleCategoryClick('3D Models')}>
             <UilCube className="menu-icon" />
             3D Models
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${selectedCategory === 'Mockups' ? 'active' : ''}`} onClick={() => handleCategoryClick('Mockups')}>
             <UilImages className="menu-icon" />
             Mockups
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${selectedCategory === 'Templates' ? 'active' : ''}`} onClick={() => handleCategoryClick('Template')}>
             <UilFile className="menu-icon" />
             Templates
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${selectedCategory === 'Audio' ? 'active' : ''}`} onClick={() => handleCategoryClick('Audio')}>
             <UilMusic className="menu-icon" />
             Audio Samples
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${selectedCategory === 'Photos' ? 'active' : ''}`} onClick={() => handleCategoryClick('Photos')}>
             <UilCamera className="menu-icon" />
             Photos
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${selectedCategory === 'Presentation Templates' ? 'active' : ''}`} onClick={() => handleCategoryClick('Presentation Templates')}>
             <Uil0Plus className="menu-icon" />
-            Presentation Templates
+            Presentations
           </li>
-          <li className="menu-item">
+          <li className={`menu-item ${selectedCategory === 'Fonts' ? 'active' : ''}`} onClick={() => handleCategoryClick('Fonts')}>
             <UilFont className="menu-icon" />
             Fonts
           </li>
