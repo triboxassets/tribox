@@ -5,7 +5,7 @@
 }
 
 body, html {
-  font-family: 'DINNextLTPro';
+  font-family: 'DINNextLTPro', sans-serif;
   line-height: 1.6;
   color: #fffce8;
   background-color: #0d0c12;
@@ -22,28 +22,45 @@ a, button {
 .artists-container {
   padding-top: 60px; 
   background-color: #0d0c12;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.header-container {
+.main-content {
+  flex: 1;
+  overflow-y: auto;
   padding: 20px;
+}
+
+.top-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 10px; /* Set a small height for the top banner */
+  margin-bottom: 10px; /* Reduce the margin to bring the sections closer */
+  overflow: hidden; /* Ensure the image does not overflow */
+}
+
+.top-banner-img {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+  object-fit: cover; /* Ensure the image fits nicely in the banner without being squished */
+  height: 100%; /* Ensure the image fills the height of the banner */
 }
 
 .all-designers {
-  font-family: 'Rische';
-  font-size: 124px;
+  font-family: 'Rische', serif;
+  font-size: 4rem;
   color: #fffce8;
   margin: 0;
+  margin-top: 10px; /* Adjust to reduce distance from top banner */
 }
+
 
 .all-designers .dot {
   color: #ED254E;
-}
-
-.content {
-  padding: 20px;
-  overflow-y: auto;
-  height: calc(100vh - 60px); /* Adjust this value based on the height of your Navbar */
 }
 
 .filter-bar {
@@ -52,7 +69,7 @@ a, button {
   margin-bottom: 20px;
 }
 
-.filters, .filter-inputs, .featured-artists {
+.filters, .filter-inputs {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
@@ -63,6 +80,7 @@ a, button {
   transition: all 0.3s ease;
   border-radius: 5px;
   background-color: #181623;
+  color: #fffce8;
 }
 
 .filter-button.active, .filter-button:hover {
@@ -75,19 +93,20 @@ a, button {
   gap: 10px;
 }
 
-.filter-inputs input {
+.search-bar-artists {
   padding: 10px;
   border: none;
-  width: 150px;
+  width: 250px; /* Make the search bar longer */
   background-color: #181623;
   box-shadow: 0 0 5px #6a3eb3;
   color: #fffce8;
-  height: 25px; /* Match the height of the toggle switch */
+  border-radius: 5px;
 }
 
 .featured-artists {
   display: flex;
   align-items: center;
+  margin-left: auto; /* Move to the right corner */
 }
 
 .toggle-switch {
@@ -139,24 +158,9 @@ input:checked + .toggle-label:before {
   flex-wrap: wrap;
   gap: 20px;
   overflow-y: auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
-.artist-card {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #181623;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: calc(33.333% - 20px);
-}
-
-@media (max-width: 768px) {
-  .artist-card {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .artist-card {
-    width: 100%;
-  }
+.artists-list::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 }

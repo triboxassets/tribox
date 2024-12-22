@@ -1,5 +1,6 @@
 import React from 'react';
 import './ArtistCard.css';
+import StarIcon from '../../Assets/Star.svg';
 
 interface ArtistCardProps {
   name: string;
@@ -25,7 +26,12 @@ const ArtistCard: React.FC<ArtistCardProps> = ({
   <div className="artist-card">
     <div className="artist-header">
       <h3>{name}</h3>
-      {isPro && <span className="featured-badge">Featured</span>}
+      {isPro && (
+        <span className="featured-badge">
+          <img src={StarIcon} alt="Star" className="star-icon" />
+          Featured
+        </span>
+      )}
     </div>
     <div className="artist-info">
       <img src={profilePhoto} alt={`${name}'s profile`} className="profile-photo" />

@@ -82,72 +82,59 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
-      <div className="search-bar">
-        <div className="search-container">
-          <div className="search-category">
-            <span onClick={handleCategoryClick} className="category-label">
-              {selectedCategory.icon}
-              {selectedCategory.name}
-            </span>
-            <img
-              src={ArrowIcon}
-              alt="Arrow Icon"
-              className={`arrow-icon ${isDropdownOpen ? 'open' : ''}`}
-              onClick={handleCategoryClick}
-            />
-            <input
-              type="text"
-              placeholder="What does your project need?"
-              className="search-input"
-              value={searchQuery}
-              onChange={handleSearchChange}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  handleSearchSubmit();
-                }
-              }}
-            />
+    <div className="search-bar">
+      <div className="search-container">
+        <div className="search-category" onClick={handleCategoryClick}>
+          <div className="category-label">
+            {selectedCategory.icon}
+            <span>{selectedCategory.name}</span>
           </div>
-          <div
-            className="search-icon-container"
-            onClick={handleSearchSubmit}
-          >
-            <UilSearch className="search-icon" />
-          </div>
+          <img
+            src={ArrowIcon}
+            alt="Arrow Icon"
+            className={`arrow-icon ${isDropdownOpen ? 'open' : ''}`}
+          />
         </div>
-        {isDropdownOpen && (
-          <ul className="dropdown-menu">
-            {categories.map((category) => (
-              <li
-                key={category.name}
-                className="dropdown-item"
-                onClick={() => handleCategorySelect(category)}
-              >
-                {category.icon}
-                {category.name}
-              </li>
-            ))}
-          </ul>
-        )}
-        {searchQuery && suggestions.length > 0 && (
-          <ul className="suggestions-list">
-            {suggestions.map((item) => (
-              <li key={item.id} className="suggestion-item">
-                <img
-                  src={item.featuredImage?.src}
-                  alt={item.featuredImage?.altText}
-                  className="suggestion-thumbnail"
-                />
-                <div className="suggestion-text">
-                  <h4>{item.title}</h4>
-                  <p>{item.descriptionHtml?.replace(/<\/?[^>]+(>|$)/g, "")}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
+        <form onSubmit={handleSearchSubmit} className="search-form">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search for assets..."
+            value={searchQuery}
+            onChange={handleSearchChange}
+          />
+          <button type="submit" className="search-icon-container">
+            <UilSearch className="search-icon" />
+          </button>
+        </form>
       </div>
+      {isDropdownOpen && (
+        <ul className="dropdown-menu">
+          {categories.map((category) => (
+            <li
+              key={category.name}
+              className="dropdown-item"
+              onClick={() => handleCategorySelect(category)}
+            >
+              {category.icon}
+              {category.name}
+            </li>
+          ))}
+        </ul>
+      )}
+      {suggestions.length > 0 && (
+        <ul className="suggestions-list">
+          {suggestions.map((suggestion) => (
+            <li key={suggestion.id} className="suggestion-item">
+              <img src={suggestion.thumbnail} alt={suggestion.title} className="suggestion-thumbnail" />
+              <div className="suggestion-text">
+                <h4>{suggestion.title}</h4>
+                <p>{suggestion.productType}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

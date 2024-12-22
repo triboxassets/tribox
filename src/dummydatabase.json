@@ -14,24 +14,34 @@
       { "key": "file_format", "value": "JPG" },
       { "key": "author", "value": "Hokusai" }
     ],
-    "tags": ["art", "traditional", "Japanese"]
+    "tags": ["art", "traditional", "Japanese"],
+    "AllImages": [
+      "/assets/ukiyoe.png",
+      "/assets/aest.gif",
+      "/assets/olm.webp"
+    ]
   },
   {
     "id": "2",
     "title": "3D Car Model",
     "descriptionHtml": "<p>Realistic 3D model of a car, ready for animation or rendering.</p>",
     "featuredImage": {
-      "src": "/assets/scene.gltf",
+      "src": "/assets/blue/scene.gltf",
       "altText": "3D Car Model"
     },
     "productType": "3D Models",
     "metafields": [
       { "key": "rating", "value": "4.9" },
       { "key": "upload_date", "value": "2024-07-15" },
-      { "key": "file_format", "value": "GLTF" },
+      { "key": "file_format", "value": "PNG" },
       { "key": "author", "value": "AutoDesign Studio" }
     ],
-    "tags": ["3D", "model", "car"]
+    "tags": ["3D", "model", "car"],
+    "AllImages": [
+      "/assets/scene.png",
+      "/assets/gds.jpg",
+      "/assets/gds2.jpg"
+    ]
   },
   {
     "id": "3",
@@ -48,7 +58,12 @@
       { "key": "file_format", "value": "PPTX" },
       { "key": "author", "value": "TemplateMasters" }
     ],
-    "tags": ["business", "presentation", "template"]
+    "tags": ["business", "presentation", "template"],
+    "AllImages": [
+      "/assets/Monitor.png",
+      "/assets/olm.webp",
+      "/assets/aest.gif"
+    ]
   },
   {
     "id": "4",
@@ -65,14 +80,19 @@
       { "key": "file_format", "value": "PSD" },
       { "key": "author", "value": "MockupPro" }
     ],
-    "tags": ["mockup", "branding", "design"]
+    "tags": ["mockup", "branding", "design"],
+    "AllImages": [
+      "/assets/screenmockup.png",
+      "/assets/gds.jpg",
+      "/assets/aest.gif"
+    ]
   },
   {
     "id": "5",
     "title": "Photography Portfolio",
     "descriptionHtml": "<p>A stunning portfolio showcasing a wide range of photography styles.</p>",
     "featuredImage": {
-      "src": "/assets/pillar.png",
+      "src": "/assets/olm.webp",
       "altText": "Photography Portfolio"
     },
     "productType": "Photos",
@@ -82,14 +102,19 @@
       { "key": "file_format", "value": "PNG" },
       { "key": "author", "value": "Jane Doe" }
     ],
-    "tags": ["photography", "portfolio", "art"]
+    "tags": ["photography", "portfolio", "art"],
+    "AllImages": [
+      "/assets/pillar.png",
+      "/assets/olm.webp",
+      "/assets/gds2.jpg"
+    ]
   },
   {
     "id": "6",
     "title": "Business Branding Mockup",
     "descriptionHtml": "<p>Realistic branding mockup for presenting logos and branding designs.</p>",
     "featuredImage": {
-      "src": "/assets/pillar.png",
+      "src": "/assets/aest.gif",
       "altText": "Business Branding Mockup"
     },
     "productType": "Mockups",
@@ -99,7 +124,12 @@
       { "key": "file_format", "value": "PSD" },
       { "key": "author", "value": "DesignWorks" }
     ],
-    "tags": ["branding", "mockup", "business"]
+    "tags": ["branding", "mockup", "business"],
+    "AllImages": [
+      "/assets/pillar.png",
+      "/assets/gds.jpg",
+      "/assets/aest.gif"
+    ]
   },
   {
     "id": "7",
@@ -116,24 +146,34 @@
       { "key": "file_format", "value": "PNG" },
       { "key": "author", "value": "AbstractVision" }
     ],
-    "tags": ["art", "abstract", "spiral"]
+    "tags": ["art", "abstract", "spiral"],
+    "AllImages": [
+      "/assets/spiral.png",
+      "/assets/gds2.jpg",
+      "/assets/olm.webp"
+    ]
   },
   {
     "id": "8",
     "title": "Young Priestess",
     "descriptionHtml": "<p>A highly detailed 3D model of a vintage clock, ready for rendering.</p>",
     "featuredImage": {
-      "src": "/assets/blue/scene.gltf",
+      "src": "/assets/young_priestess.glb",
       "altText": "Young Priestess"
     },
     "productType": "3D Models",
     "metafields": [
       { "key": "rating", "value": "5.0" },
       { "key": "upload_date", "value": "2024-02-28" },
-      { "key": "file_format", "value": "GLTF" },
+      { "key": "file_format", "value": "PNG" },
       { "key": "author", "value": "ClockWorks Studio" }
     ],
-    "tags": ["3D", "model", "clock"]
+    "tags": ["3D", "model", "clock"],
+    "AllImages": [
+      "/assets/blue/scene.png",
+      "/assets/gds.jpg",
+      "/assets/pillar.png"
+    ]
   },
   {
     "id": "9",
@@ -150,6 +190,11 @@
       { "key": "file_format", "value": "OTF" },
       { "key": "author", "value": "FontSmiths" }
     ],
-    "tags": ["font", "modern", "typography"]
+    "tags": ["font", "modern", "typography"],
+    "AllImages": [
+      "/assets/Elara.png",
+      "/assets/aest.gif",
+      "/assets/olm.webp"
+    ]
   }
 ]

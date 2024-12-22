@@ -93,7 +93,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ productId, buttonText }) => {
 
         model.position.sub(center);
 
-        const aspect = renderer.domElement.clientWidth / renderer.domElement.clientHeight;
+        //const aspect = renderer.domElement.clientWidth / renderer.domElement.clientHeight;
         const maxDim = Math.max(size.x, size.y, size.z);
         const distance = maxDim / (2 * Math.tan((Math.PI / 180) * camera.fov / 2));
         const fitOffset = 1.5;

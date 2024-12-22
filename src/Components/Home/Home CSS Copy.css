@@ -1,0 +1,422 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'DINNextLTPro';
+  line-height: 1.6;
+  color: #fff;
+  background-color: #0D0C12;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+}
+
+
+.home {
+  width: 100%;
+}
+
+
+
+
+.hero {
+  position: relative;
+  background: url('../../Assets/jungleart.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.hero-overlay {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+
+.hero-content {
+  text-align: left;
+  width: 80%; 
+  max-width: 1000px; 
+  margin: 0 auto;
+  margin-bottom: 20px; 
+}
+
+
+.hero-title {
+  color: #ffffff;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  font-size: 4rem;
+}
+
+.hero-highlight {
+  color: #ffffff;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 4rem;
+}
+
+
+.banner-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+.banner {
+  max-width: 80%; 
+  height: auto; 
+}
+
+
+.tribox-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: row-reverse; 
+  padding: 0 20px; 
+}
+
+.tribox-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: normal;
+  padding: 20px; 
+  color: white;
+  max-width: 600px;
+}
+
+.tribox-header {
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: normal;
+  font-size: 60px;
+  text-align: left;
+}
+
+.tribox-title {
+  color: rgb(255, 255, 255); 
+  font-family: 'DINNextLTPro', sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+.tribox-highlight {
+  color: #ED254E;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-size: 60px; 
+  font-weight: 900;
+}
+
+.tribox-description {
+  width: 100%; 
+  max-width: 500px; 
+  font-size: 16px; 
+  line-height: 24px; 
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: normal;
+  text-align: left;
+  margin: 0 auto; 
+}
+
+/* Tribox Button Styling */
+.tribox-button {
+  width: 160px; 
+  height: 50px; 
+  background: white;
+  border-radius: 29.27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px; 
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.tribox-button-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.tribox-button-icon {
+  width: 20px; 
+  height: 20px; 
+  background-color: transparent; 
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.tribox-button-text {
+  font-size: 18px;
+  font-weight: 500; 
+  color: black; 
+  text-align: center;
+  font-family: 'DINNextLTPro', sans-serif;
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Hover effect */
+.tribox-button:hover {
+  background: #4c1bfc; /* Change background to red */
+}
+
+.tribox-button:hover .tribox-button-text {
+  color: white; /* Change text color to white on hover */
+}
+
+.tribox-button:hover .tribox-button-icon {
+  color: white; /* Change icon color to white on hover */
+}
+
+
+.tribox-image-container {
+  display: flex;
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+.tribox-image {
+  width: 100%; 
+  max-width: 700px; 
+  height: auto; 
+  object-fit: contain; 
+  margin-left: 10px; 
+}
+
+
+
+
+
+
+.infinite-scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.infinite-scroll-container2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.loop-slider {
+  display: flex;
+  width: 100%;
+  animation: scroll 20s linear infinite; 
+}
+
+.inner {
+  display: flex;
+  min-width: 100%; 
+}
+
+.scroll-image {
+  width: 119px; 
+  height: auto;
+  margin-right: 15px; 
+  object-fit: contain;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+
+.second-carousel .loop-slider {
+  animation: scroll-right-to-left 20s linear infinite;
+}
+
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(100%); 
+  }
+}
+
+
+.loop-slider {
+  display: flex;
+}
+
+.inner {
+  display: flex;
+}
+
+.inner img {
+  width: 119px; 
+}
+
+
+.featured-works-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.featured-works-title {
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff; 
+  display: inline-block;
+  letter-spacing: 5px;
+}
+
+
+
+.menu-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  padding: 0;
+  gap: 20px; 
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16.8px;
+  font-family: 'DINNextLTPro', sans-serif;
+  border-radius: 15px; 
+  width: 150px; 
+  padding: 10px 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  
+  
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  height: auto; 
+}
+
+
+.menu-item:nth-child(6) {
+  
+  width: auto; 
+  max-width: 200px; 
+  text-overflow: unset; 
+  white-space: normal; 
+  padding: 10px 12px; 
+}
+
+
+.menu-icon {
+  font-size: 42px;
+  margin-bottom: 12px; 
+  transition: color 0.3s ease;
+}
+
+
+.menu-item:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.menu-item:hover:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: currentColor; 
+  opacity: 0.2; 
+  z-index: -1; 
+}
+
+
+.menu-item:nth-child(1):hover {
+  color: #ED254E; 
+}
+
+.menu-item:nth-child(2):hover {
+  color: #FFBE0B; 
+}
+
+.menu-item:nth-child(3):hover {
+  color: #A0ECD0; 
+}
+
+.menu-item:nth-child(4):hover {
+  color: #6610F2; 
+}
+
+.menu-item:nth-child(5):hover {
+  color: #E5C1BD; 
+}
+
+.menu-item:nth-child(6):hover {
+  color: #9ED0E6; 
+}
+
+.menu-item:nth-child(7):hover {
+  color: #61E294; 
+}
+
+
+.work-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  justify-items: center;
+}
+
+
+
+@media (max-width: 768px) {
+  .tribox-description {
+    max-width: 90%; 
+    font-size: 14px; 
+    line-height: 20px; 
+    text-align: center; 
+  }
+}
