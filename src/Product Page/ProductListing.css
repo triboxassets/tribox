@@ -1,59 +1,77 @@
 .product-details-specifications-container {
   display: flex;
+  flex-direction: column;
   gap: 40px; /* Adjust the space between specifications and details */
   padding: 40px;
 }
-  
-  /* Back button container styling */
-  .back-button-container {
-    margin-top: 95px; /* Adds spacing below the navbar */
-    text-align: left; /* Aligns the button to the left */
-    padding: 20px 40px; /* Adds some padding around the button */
-    z-index: 10; /* Ensures it's above other elements */
-  }
-  
-  .back-button button {
-    background: none;
-    font-family: 'DINNextLTPro', sans-serif;
-    font-weight:500;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .back-button button:hover {
-    text-decoration: underline;
-  }
 
-  .back-arrow-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }  
-  
-  .related-products {
-    padding: 20px;
+@media (min-width: 768px) {
+  .product-details-specifications-container {
+    flex-direction: row;
   }
-  
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  
-  .product-card {
-    background: #222;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
+}
 
-  
+/* Back button container styling */
+.back-button-container {
+  margin-top: 95px; /* Adds spacing below the navbar */
+  text-align: left; /* Aligns the button to the left */
+  padding: 20px 40px; /* Adds some padding around the button */
+  z-index: 10; /* Ensures it's above other elements */
+}
+
+.back-button button {
+  background: none;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-weight: 500;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.back-button button:hover {
+  text-decoration: underline;
+}
+
+.back-arrow-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.related-products {
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #222;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card p {
+  color: white;
+  font-family: 'DINNextLTPro', sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+}

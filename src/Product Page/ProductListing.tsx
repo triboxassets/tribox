@@ -7,11 +7,13 @@ import ProductSpecifications from './ProductSpecifications.tsx';
 import './ProductListing.css';
 import BackArrow from '../Assets/back_arrow.svg';
 import dummydatabase from '../dummydatabase.json'; // Assuming the JSON file is in the same folder
+import dummycollections from '../dummycollections.json'; // Assuming the JSON file is in the same folder
 import { useParams } from 'react-router-dom'; // For extracting the dynamic productId
 
 const ProductListing = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [product, setProduct] = useState<any>(null);
+  const [collection, setCollection] = useState<any>(null);
 
   // Get the productId from the route
   const { productId } = useParams<{ productId: string }>();
@@ -33,6 +35,11 @@ const ProductListing = () => {
   useEffect(() => {
     const productData = dummydatabase.find((item) => item.id === productId);
     setProduct(productData);
+
+    if (productData) {
+      const collectionData = dummycollections.collections.find((collection) => collection.id === parseInt(productData.collection_id));
+      setCollection(collectionData);
+    }
   }, [productId]);
 
   return (
@@ -52,7 +59,13 @@ const ProductListing = () => {
       <div className="main-product-section">
         {/* Product Preview Window */}
         <div className="preview-container">
-          <PreviewWindow />
+          {product && collection && (
+            <PreviewWindow
+              featuredImage={product.featuredImage.src}
+              allImages={product.AllImages}
+              signatureSvg={collection.signature_svg}
+            />
+          )}
         </div>
 
         {/* Product Details and Specifications in the same container */}

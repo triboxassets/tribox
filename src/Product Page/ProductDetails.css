@@ -1,10 +1,9 @@
-
 /* Left section styling */
 .details-left {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width:100%;
+  width: 100%;
   flex: 2;
   color: white;
   font-family: 'DINNextLTPro', sans-serif;

@@ -7,7 +7,7 @@
   max-width: 300px;
   height: auto;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
   position: relative;
   background: transparent;
   border-radius: 15px;
@@ -17,8 +17,8 @@
 }
 
 .work-card:hover {
-  transform: translateY(-8px); /* Increased lift */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover styles for card-wide interactions */
@@ -42,18 +42,12 @@
   border-radius: 10px;
   margin-bottom: 15px;
   position: relative;
-  transition: transform 0.3s ease;
 }
 
 .work-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.work-card:hover .work-card-image-container {
-  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .work-card-pan-icon {
@@ -81,16 +75,10 @@
   background: var(--accent-color);
   color: white;
   padding: 5px 10px;
-  border-radius: 50px; /* Rounded badge */
+  border-radius: 5px;
   font-size: 14px;
   display: flex;
   align-items: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Added shadow */
-  transition: transform 0.3s ease;
-}
-
-.work-card:hover .card-rating-badge {
-  transform: scale(1.1); /* Slight enlarge on hover */
 }
 
 .card-star-icon {
@@ -99,14 +87,13 @@
 
 /* Title */
 .work-card-title {
-  font-size: 1.8rem; /* Increased font size */
+  font-size: 1.4rem; /* Increased font size */
   font-weight: bold; /* Made it bold */
   margin: 10px 0;
   color: #fff;
   white-space: nowrap; /* Prevents text from wrapping */
   overflow: hidden; /* Ensures overflow is hidden */
   text-overflow: ellipsis; /* Adds ellipsis for long text */
-  transition: color 0.3s ease;
 }
 
 /* Meta information */
@@ -132,7 +119,6 @@
   white-space: nowrap; /* Prevents text from wrapping */
   overflow: hidden; /* Ensures overflow is hidden */
   text-overflow: ellipsis; /* Adds ellipsis for long text */
-  transition: color 0.3s ease;
 }
 
 /* Button */
@@ -145,29 +131,12 @@
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .work-card-button:hover {
   background: var(--accent-color);
   color: #fff;
-  transform: scale(1.05); /* Slight enlargement on hover */
-}
-
-/* Subtle Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.work-card {
-  animation: fadeIn 0.5s ease-in;
 }
 
 /* Responsive Design */

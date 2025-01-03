@@ -1,0 +1,67 @@
+{
+  "collections": [
+    {
+      "id": 1001,
+      "title": "Tribox Original Collection 1",
+      "handle": "tribox-original-collection-1",
+      "updated_at": "2024-12-22T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    },
+    {
+      "id": 1002,
+      "title": "Tribox Original Collection 2",
+      "handle": "tribox-original-collection-2",
+      "updated_at": "2024-12-21T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    },
+    {
+      "id": 1023,
+      "title": "Tribox Original Collection 3",
+      "handle": "tribox-original-collection-3",
+      "updated_at": "2024-12-20T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    },
+    {
+      "id": 1054,
+      "title": "Tribox Original Collection 4",
+      "handle": "tribox-original-collection-4",
+      "updated_at": "2024-12-19T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    },
+    {
+      "id": 1067,
+      "title": "Tribox Original Collection 5",
+      "handle": "tribox-original-collection-5",
+      "updated_at": "2024-12-18T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    },
+    {
+      "id": 1089,
+      "title": "Tribox Original Collection 6",
+      "handle": "tribox-original-collection-6",
+      "updated_at": "2024-12-17T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    },
+    {
+      "id": 1123,
+      "title": "Tribox Original Collection 7",
+      "handle": "tribox-original-collection-7",
+      "updated_at": "2024-12-16T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    },
+    {
+      "id": 1145,
+      "title": "Tribox Original Collection 8",
+      "handle": "tribox-original-collection-8",
+      "updated_at": "2024-12-15T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    },
+    {
+      "id": 1168,
+      "title": "Tribox Original Collection 9",
+      "handle": "tribox-original-collection-9",
+      "updated_at": "2024-12-14T12:00:00-05:00",
+      "signature_svg": "/assets/signature.png"
+    }
+  ]
+}

@@ -1,99 +1,122 @@
-.login-container {
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'DINNextLTPro', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+  }
+  
+  .login-container {
     width: 100%;
     height: 100vh;
     display: flex;
     background: white;
     font-family: 'DINNextLTPro', sans-serif;
-    position: relative; /* Ensure relative positioning for the absolute child */
-}
-
-.login-left {
+    position: relative;
+  }
+  
+  .login-left {
     width: 50%;
     position: relative;
-    color: rgb(255, 255, 255);
+    color: #fff;
     font-family: 'DINNextLTPro', sans-serif;
-}
-
-.login-background-image {
+  }
+  
+  .login-background-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.login-overlay {
+  }
+  
+  .login-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
-}
-
-.login-logo {
+  }
+  
+  .login-logo {
     position: absolute;
     top: 20px;
     left: 20px;
     width: 60px;
     z-index: 1;
     font-family: 'DINNextLTPro', sans-serif;
-}
-
-.login-text-content {
+  }
+  
+  .login-text-content {
     position: absolute;
     bottom: 40px;
     left: 20px;
-    right: auto;  
     z-index: 1;
     font-family: 'DINNextLTPro', sans-serif;
-    text-align: left;  
-    color: #D1D1D1;
-    width: auto;  
-    max-width: 500px; 
-    padding: 10px; 
-}
-
-.login-text-content h1 {
-    font-size: 64px;  
+    text-align: left;
+    color: #d1d1d1;
+    max-width: 500px;
+    padding: 10px;
+  }
+  
+  .login-text-content h1 {
+    font-size: 48px;
     font-family: 'DINNextLTPro', sans-serif;
-    width: 100%;  
-    line-height: 1;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); 
-}
-
-.photo-credit {
+    line-height: 1.2;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .photo-credit {
     display: block;
     margin-top: 20px;
     font-size: 12px;
     font-family: 'DINNextLTPro', sans-serif;
-}
-
-.login-right {
+  }
+  
+  .login-right {
     width: 50%;
     padding: 40px;
     display: flex;
     flex-direction: column;
     font-family: 'DINNextLTPro', sans-serif;
-    transform: scale(0.9); /* Reduces the scale slightly */
-    transform-origin: center; 
-}
-
-.login-bar-container {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  
+  .login-bar-container {
     position: relative;
     height: 4px;
     display: flex;
-    background-color: #DADADA; 
-    width: 42%; 
-}
-
-.login-bar {
+    background-color: #dadada;
+    width: 42%;
+  }
+  
+  .login-bar {
     position: absolute;
     height: 100%;
-    background-color: #4c1bfc; 
+    background-color: #4c1bfc;
     transition: transform 0.3s, width 0.3s;
-    bottom: 0; 
-}
-
-.login-nav {
+    bottom: 0;
+  }
+  
+  .login-nav {
     font-size: 20px;
     display: flex;
     gap: 10px;
@@ -101,173 +124,159 @@
     font-weight: 300;
     color: black;
     position: relative;
-}
-
-.login-nav .active {
+  }
+  
+  .login-nav .active {
     font-size: 20px;
     color: #4c1bfc;
     font-weight: 700;
     font-family: 'DINNextLTPro', sans-serif;
-    font-weight: 700;
-}
-
-
-.login-nav span {
+  }
+  
+  .login-nav span {
     cursor: pointer;
     position: relative;
     display: inline-block;
     padding: 10px;
     text-align: center;
-}
-
-.login-nav a {
-    font-size: 20px;
-    color: #242423;
-    text-decoration: none;
-    font-family: 'DINNextLTPro', sans-serif;
-    font-weight: 300;
-}
-
-.login-form-container h1 {
-    font-size: 72px;
+  }
+  
+  .login-form-container h1 {
+    font-size: 48px;
     font-family: 'DM Serif Display', serif;
-    font-weight: 300; 
+    font-weight: 300;
     color: #242423;
     text-align: left;
-}
-
-
-.login-form-container > p {
+  }
+  
+  .login-form-container > p {
     color: #242423;
     margin-bottom: 40px;
     font-family: 'DINNextLTPro', sans-serif;
-    font-weight: normal; 
+    font-weight: normal;
     text-align: left;
     white-space: normal;
     max-width: 300px;
     width: 100%;
-}
-
-.form-group {
+  }
+  
+  .form-group {
     margin-bottom: 20px;
     color: #333533;
     text-align: left;
-}
-
-
-.form-group label {
+  }
+  
+  .form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
     font-family: 'DINNextLTPro', sans-serif;
-    font-size: 16;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 16px; 
-    border: 1px solid   ;
-    border-radius: 8px;
     font-size: 16px;
-    font-family: 'DINNextLTPro', sans-serif;
-    background-color: #F5F7FA;
-    height: 50px; 
-}
-
-.form-group select {
+  }
+  
+  .form-group input {
     width: 100%;
-    padding: 16px; 
+    padding: 16px;
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
     font-family: 'DINNextLTPro', sans-serif;
-    background-color: #F5F7FA;
-    height: 50px; 
-    appearance: none; /* Hides the default dropdown arrow */
+    background-color: #f5f7fa;
+    height: 50px;
+  }
+  
+  .form-group select {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'DINNextLTPro', sans-serif;
+    background-color: #f5f7fa;
+    height: 50px;
+    appearance: none;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><path fill="%23999" d="M0 0l5 6 5-6z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 16px center;
     background-size: 12px;
     cursor: pointer;
-}
-
-.form-group select:focus {
+  }
+  
+  .form-group select:focus {
     outline: none;
-    border-color: #007BFF; /* Highlight border on focus */
-    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25); /* Optional focus shadow */
-}
-
-.form-group select option {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+  }
+  
+  .form-group select option {
     font-family: 'DINNextLTPro', sans-serif;
     font-size: 16px;
-}
-
-.form-group input[type="checkbox"] {
+  }
+  
+  .form-group input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    margin-right: 10px; /* Spacing between the checkbox and label text */
-    accent-color: #007BFF; /* Modern browsers support this for checkbox styling */
-    border-radius: 4px; /* Optional: rounds the checkbox corners */
+    margin-right: 10px;
+    accent-color: #007bff;
+    border-radius: 4px;
     cursor: pointer;
-}
-
-.form-group label.checkbox-container {
+  }
+  
+  .form-group label.checkbox-container {
     display: flex;
     align-items: center;
     font-family: 'DINNextLTPro', sans-serif;
     font-size: 16px;
     color: #333;
     cursor: pointer;
-}
-
-.form-group input[type="checkbox"]:focus {
-    outline: 2px solid #007BFF; /* Adds a focus outline for accessibility */
-}
-
-.form-group input[type="checkbox"]:checked {
-    background-color: #007BFF; /* Sets the fill color when the checkbox is checked */
-    border: none; /* Removes border to make it look cleaner */
-}
-
-
-.password-input {
+  }
+  
+  .form-group input[type="checkbox"]:focus {
+    outline: 2px solid #007bff;
+  }
+  
+  .form-group input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .password-input {
     position: relative;
-}
-
-.eye-icon {
+  }
+  
+  .eye-icon {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    width: 18px;  
+    width: 18px;
     height: 18px;
-}
-
-.form-options {
+  }
+  
+  .form-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     font-family: 'DINNextLTPro', sans-serif;
-}
-
-.remember-me {
+  }
+  
+  .remember-me {
     display: flex;
     align-items: center;
     gap: 8px;
     font-family: 'DINNextLTPro', sans-serif;
     color: #333533;
-}
-
-
-.forgot-password {
+  }
+  
+  .forgot-password {
     color: #0066cc;
     text-decoration: none;
     font-family: 'DINNextLTPro', sans-serif;
-}
-
-.sign-in-button {
+  }
+  
+  .sign-in-button {
     width: 100%;
     padding: 14px;
     background: #000;
@@ -278,17 +287,17 @@
     cursor: pointer;
     margin-bottom: 20px;
     font-family: 'DINNextLTPro', sans-serif;
-}
-
-.social-login {
+  }
+  
+  .social-login {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-family: 'DINNextLTPro', sans-serif;
     color: black;
-}
-
-.social-button {
+  }
+  
+  .social-button {
     width: 100%;
     padding: 12px;
     display: flex;
@@ -301,34 +310,33 @@
     cursor: pointer;
     font-size: 16px;
     font-family: 'DINNextLTPro', sans-serif;
-}
-
-.social-button img {
+  }
+  
+  .social-button img {
     width: 20px;
     height: 20px;
-}
-
-
-.progress-container {
+  }
+  
+  .progress-container {
     position: absolute;
-    bottom: 0; 
-    width: 100%; 
-    height: 4px; 
+    bottom: 0;
+    width: 100%;
+    height: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     z-index: 2;
-}
-
-.progress-bar {
+  }
+  
+  .progress-bar {
     width: 0;
     height: 100%;
     background-color: #4c1bfc;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
-
+  
   @keyframes progress-bar-animation {
     from {
       width: 0%;
@@ -337,99 +345,93 @@
       width: 100%;
     }
   }
-
-.slide-progress {
-    width: 100%;
-    height: 100%; 
-    border-radius: 0; 
-    overflow: hidden;
-    appearance: none; 
-}
-
-.slide-progress::-webkit-progress-bar {
-    background-color: transparent;
-    border-radius: 0;
-}
-
-.slide-progress::-webkit-progress-value {
-    background-color: #4c1bfc;
-    border-radius: 0;
-}
-
-.slide-progress::-moz-progress-bar {
-    background-color: #4c1bfc; 
-    border-radius: 0; 
-}
-
-.forgot-password-background {
+  
+  .slide-progress {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    border-radius: 0;
+    overflow: hidden;
+    appearance: none;
+  }
+  
+  .slide-progress::-webkit-progress-bar {
+    background-color: transparent;
+    border-radius: 0;
+  }
+  
+  .slide-progress::-webkit-progress-value {
+    background-color: #4c1bfc;
+    border-radius: 0;
+  }
+  
+  .slide-progress::-moz-progress-bar {
+    background-color: #4c1bfc;
+    border-radius: 0;
+  }
+  
+  .forgot-password-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: left center;
-}
-
-.form-options p {
-    font-family: 'DINNextLTPro', sans-serif; /* Ensure consistent font for the paragraph */
-    font-size: 16px;                 /* Font size for the paragraph */
-    color: black;                    /* Keep the text black */
-}
-
-.form-options a {
-    color: #0066cc;                    /* Black text for the link */
-    text-decoration: none;            /* No underline */
-}
-
-.forgot-password-right {
+  }
+  
+  .form-options p {
+    font-family: 'DINNextLTPro', sans-serif;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .form-options a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .forgot-password-right {
     display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: center;         /* Vertically center */
-    flex-direction: column;      /* Arrange content vertically */
-    height: 100%;                /* Ensure it takes the full height of the container */
-    padding-top: 200px;           /* Move content down */
-    margin-left: 40px;           /* Adjust the left margin to move content right */
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 200px;
+    margin-left: 40px;
   }
   
   .login-form-container {
-    padding-top: 20px;  /* This will add spacing above the form if needed */
-  }  
-
-/* DARK MODE */
-
-.dark-mode-toggle {
-    position: absolute;
-    top: 20px; /* Adjust position from the top */
-    right: 20px; /* Adjust position from the right */
-    font-size: 30px; /* Set the size of the icon */
-    color: #040404; /* Set the icon color to white */
-    cursor: pointer; /* Change cursor to pointer when hovered */
-    z-index: 10; /* Ensure the icon appears on top of other elements */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    padding-top: 20px;
   }
-
+  
+  /* Dark Mode */
+  .dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #040404;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease;
+  }
+  
   body.dark-mode .dark-mode-toggle {
-    color: #fff; /* Change icon color to white in dark mode */
+    color: #fff;
   }
   
   body.dark-mode .dark-mode-toggle:hover {
-    color:#ED254E;
-    ; /* Slightly lighten the icon color on hover in dark mode */
-  }  
-  
-  .dark-mode-toggle:hover {
-    color: #ED254E; /* Lighten the icon on hover for better visibility */
+    color: #ed254e;
   }
   
-
-/* Dark mode toggle icon */
+  .dark-mode-toggle:hover {
+    color: #ed254e;
+  }
   
-  /* Styles for dark mode */
   body.dark-mode {
     background-color: #333;
-    color: white; /* Set default text color to white */
+    color: white;
   }
   
   body.dark-mode .login-container {
-    background-color: #0D0C12; /* Dark background for the login container */
+    background-color: #0d0c12;
   }
   
   body.dark-mode .login-left .login-text-content,
@@ -437,45 +439,41 @@
   body.dark-mode .form-options,
   body.dark-mode .login-logo,
   body.dark-mode .login-form label {
-    color: white; /* Ensure text color is white inside all relevant containers */
+    color: white;
   }
   
   body.dark-mode .login-form-container {
-    background-color: #0D0C12; /* Dark background for form */
+    background-color: #0d0c12;
   }
   
-  /* Optional: Change button styles for dark mode */
   body.dark-mode .sign-in-button {
     background-color: #6a3eb3;
-    color: #fff; /* Ensure button text is white */
+    color: #fff;
   }
   
   body.dark-mode .back-to-signin-button {
-    color: #6a3eb3; /* Ensure link color is white */
+    color: #6a3eb3;
   }
   
-  /* Optional: Change input field text color */
   body.dark-mode .login-form input {
     color: white;
-    background-color: #181623; /* Dark background for input fields */
+    background-color: #181623;
   }
   
   body.dark-mode .login-form input::placeholder {
-    color: #bbb; /* Light placeholder text */
+    color: #bbb;
   }
   
-  /* Dark Mode Styling for h1 inside .login-form-container */
-body.dark-mode .login-form-container h1 {
-    font-size: 72px;
+  body.dark-mode .login-form-container h1 {
+    font-size: 48px;
     font-family: 'DM Serif Display', serif;
     font-weight: 300;
-    color: #fff; /* Set the text color to white for dark mode */
+    color: #fff;
     text-align: left;
-}
-
-/* Dark Mode Styling for p inside .login-form-container */
-body.dark-mode .login-form-container > p {
-    color: #fff; /* Set the text color to white for dark mode */
+  }
+  
+  body.dark-mode .login-form-container > p {
+    color: #fff;
     margin-bottom: 40px;
     font-family: 'DINNextLTPro', sans-serif;
     font-weight: normal;
@@ -483,91 +481,144 @@ body.dark-mode .login-form-container > p {
     white-space: normal;
     max-width: 300px;
     width: 100%;
-}
-
-.form-options p {
-    font-family: 'DINNextLTPro', sans-serif;
-    font-size: 16px;
-    color: black; /* Default color for light mode */
   }
   
   body.dark-mode .form-options p {
-    color: white; /* Change text color to white in dark mode */
+    color: white;
   }
   
-  /* Dark Mode Variant */
   body.dark-mode .form-group input {
-    background-color: #181623; /* Dark background for dark mode */
-    color: #fff; /* White text for better contrast */
-    border: 1px solid #181623; /* Darker border in dark mode */
+    background-color: #181623;
+    color: #fff;
+    border: 1px solid #181623;
   }
   
-  /* Dark mode version */
-body.dark-mode .login-nav {
-    color: #fff; /* Change text color to white in dark mode */
-}
-
-/* Dark mode active state */
-body.dark-mode .login-nav .active {
-    color: #6a3eb3; /* Keep active color the same, but it will be on a dark background */
-}
-
-/* Dark mode links */
-body.dark-mode .login-nav a {
-    color: #dddddd; /* Change link color to light gray in dark mode */
-}
-
-/* Dark mode span */
-body.dark-mode .login-nav span {
-    color: #939393; /* Change span text color to light gray */
-}
-
-body.dark-mode .login-bar-container {
-    background-color: #212121; /* Dark mode background color */
-}
-
-body.dark-mode .form-options a {
-    color: #6a3eb3; /* Lighter blue for dark mode */
-}
-
-body.dark-mode .login-bar {
-    background-color: #6a3eb3; /* A darker shade of purple for dark mode */
-}
-
-body.dark-mode .social-login {
-    color: white; /* Change text color to white in dark mode */
-}
-
-body.dark-mode .social-button {
-    background-color: #0D0C12; /* Dark background for button in dark mode */
-    border-color: #6a3eb3; /* Darker border for better contrast */
-    color: white; /* Change text color to white */
-}
-
-/* Dark mode social button hover effect */
-body.dark-mode .social-button:hover {
-    background-color: #6a3eb3; /* Slightly lighter background on hover */
-    border-color: #666; /* Border color change on hover */
-}
-
-body.dark-mode .social-button img {
-    filter: brightness(0) invert(1); /* This will invert the image color for icons if needed */
-}
-
-body.dark-mode .form-group select {
-    background-color: #181623; /* Dark background */
-    color: #fff; /* Light text for dark mode */
-    border: 1px solid #181623; /* Lighter border for dark mode */
-}
-
-/* Dark mode focus state */
-body.dark-mode .form-group select:focus {
-    border-color: #4c1bfc; /* Highlight with a bright color */
-    box-shadow: 0 0 4px rgba(76, 27, 252, 0.25); /* Optional focus shadow */
-}
-
-/* Dark mode option styling */
-body.dark-mode .form-group select option {
-    background-color: #181623; /* Dark background for options */
-    color: #fff; /* Light text for options */
-}
+  body.dark-mode .login-nav {
+    color: #fff;
+  }
+  
+  body.dark-mode .login-nav .active {
+    color: #6a3eb3;
+  }
+  
+  body.dark-mode .login-nav a {
+    color: #dddddd;
+  }
+  
+  body.dark-mode .login-nav span {
+    color: #939393;
+  }
+  
+  body.dark-mode .login-bar-container {
+    background-color: #212121;
+  }
+  
+  body.dark-mode .form-options a {
+    color: #6a3eb3;
+  }
+  
+  body.dark-mode .login-bar {
+    background-color: #6a3eb3;
+  }
+  
+  body.dark-mode .social-login {
+    color: white;
+  }
+  
+  body.dark-mode .social-button {
+    background-color: #0d0c12;
+    border-color: #6a3eb3;
+    color: white;
+  }
+  
+  body.dark-mode .social-button:hover {
+    background-color: #6a3eb3;
+    border-color: #666;
+  }
+  
+  body.dark-mode .social-button img {
+    filter: brightness(0) invert(1);
+  }
+  
+  body.dark-mode .form-group select:focus {
+    border-color: #4c1bfc;
+    box-shadow: 0 0 4px rgba(76, 27, 252, 0.25);
+  }
+  
+  body.dark-mode .form-group select option {
+    background-color: #181623;
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .login-left,
+    .login-right {
+      width: 100%;
+    }
+  
+    .login-right {
+      padding: 20px;
+    }
+  
+    .login-text-content h1 {
+      font-size: 36px;
+    }
+  
+    .login-form-container h1 {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-text-content h1 {
+      font-size: 28px;
+    }
+  
+    .login-form-container h1 {
+      font-size: 28px;
+    }
+  
+    .login-bar-container {
+      width: 100%;
+    }
+  
+    .login-nav {
+      font-size: 18px;
+    }
+  
+    .login-nav .active {
+      font-size: 18px;
+    }
+  
+    .login-nav span {
+      padding: 8px;
+    }
+  
+    .sign-in-button {
+      font-size: 14px;
+    }
+  
+    .social-button {
+      font-size: 14px;
+    }
+  
+    .form-group label {
+      font-size: 14px;
+    }
+  
+    .form-group input,
+    .form-group select {
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+    .eye-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }

@@ -30,12 +30,12 @@ const Navbar = () => {
         </div>
         <div className="header-menu-container">
           <div className="header-menu-items">
-            <Link to="/about" className="header-menu-item">About</Link>
-            <Link to="/services" className="header-menu-item">Services</Link>
+            <Link to="/store" className="header-menu-item">Store</Link>
+            <Link to="/Destroy My Design" className="header-menu-item">Destroy My Design</Link>
             <Link to="/artists" className="header-menu-item">Artists</Link>
-            <Link to="/contact" className="header-menu-item">Contact</Link>
+            <Link to="/about" className="header-menu-item">About</Link>
           </div>
-          <Link to="/signin" className={`signin-button ${isScrolled ? 'scrolled' : ''}`}>
+          <Link to="/login" className={`signin-button ${isScrolled ? 'scrolled' : ''}`}>
             <span className="signin-text">Sign In</span>
           </Link>
         </div>
