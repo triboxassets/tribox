@@ -2,26 +2,26 @@
 .trending-tags-searches {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 16px;
-  padding: 20px 0;
+  transform: scale(0.9); /* Scaled down */
 }
 
 .trending-tags-header {
   color: white;
-  font-size: 24px;
-  font-family: 'DIN Next LT Pro', sans-serif;
-  font-weight: 100;
+  font-size: 20px; /* Reduced font size */
+  font-family: 'Geomanist', sans-serif;
+  font-weight: 300;
 }
 
 .trending-tags-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px; /* Reduced gap */
 }
 
 .trending-tag {
-  padding: 8px 16px;
+  padding: 6px 12px; /* Reduced padding */
   border-radius: 20px;
   border: 2px solid #31121A;
   background: #0D0C12;
@@ -39,23 +39,23 @@
 
 .trending-tag-text {
   color: white;
-  font-size: 16px;
-  font-family: 'DIN Next LT Pro', sans-serif;
+  font-size: 14px; /* Reduced font size */
+  font-family: 'Geomanist', sans-serif;
   font-weight: 500;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .trending-tags-header {
-    font-size: 20px;
+    font-size: 18px; /* Reduced font size */
   }
 
   .trending-tag {
-    padding: 6px 12px;
-    font-size: 14px;
+    padding: 4px 10px; /* Reduced padding */
+    font-size: 12px; /* Reduced font size */
   }
 
   .trending-tag-text {
-    font-size: 14px;
+    font-size: 12px; /* Reduced font size */
   }
 }

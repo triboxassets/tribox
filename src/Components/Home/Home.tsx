@@ -2,18 +2,22 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar ⬆️/Navbar.tsx';
 import WorkCard from '../WorkCard 😀/WorkCard.tsx';
 import Footer from '../Footer 🦶🏼/Footer.tsx';
-import Banner from '../../Assets/banner.svg';
 import dummyhomecollection from '../../dummydatabase.json';
 import featureWorks from '../../FeatureWorks.json'; // Only contains the IDs of the cards to be shown
 import './Home.css';
-import { UilCube, UilImages, UilFile, UilMusic, UilCamera, Uil0Plus, UilFont } from '@iconscout/react-unicons';
+import { UilCube, UilImages, UilFile, UilMusic, UilCamera, Uil0Plus, UilFont, UilArrowUpRight } from '@iconscout/react-unicons';
 import SearchBar from '../SearchBar 🔍/SearchBar.tsx';
 import TrendingTags from '../Home/TrendingTags.tsx';
+import dummyartists from '../../dummyartists.json';
+import artistsFeaandPop from '../../ArtistsFeaandPop.json';
+import ArtistCard from './ArtistCardHome.tsx';
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All Items');
+  const [artistCategory, setArtistCategory] = useState('featured');
+  const [filteredArtists, setFilteredArtists] = useState([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +39,13 @@ const Home = () => {
     setFilteredProducts(filtered);
   }, []);
 
+  useEffect(() => {
+    // Filter the artists based on the selected category
+    const artistIds = artistsFeaandPop[artistCategory];
+    const filtered = dummyartists.filter(artist => artistIds.includes(artist.artIds[0]));
+    setFilteredArtists(filtered);
+  }, [artistCategory]);
+
   const handleCategoryClick = (category) => {
     if (selectedCategory === category) {
       setSelectedCategory('All Items');
@@ -48,14 +59,12 @@ const Home = () => {
   return (
     <div className="home">
       <header className="hero">
-        <video autoPlay muted loop className="hero-background">
-          <source src={require('../../Assets/back.webm')} type="video/webm" />
-        </video>
         <div className="hero-overlay">
           <Navbar isScrolled={isScrolled} />
           <div className="hero-content">
             <h1 className="hero-title">
-              Get <span className="hero-highlight">thousands of assets</span> for Any Project from a Broad Range of Categories.
+              The world's <span className="hero-highlight">artistic talent</span><br />
+              passionately <span className="hero-highlight">broken</span> for you.
             </h1>
             <p className="hero-description">
               Discover and showcase amazing works from talented artists around the world.
@@ -66,12 +75,22 @@ const Home = () => {
         </div>
       </header>
 
-      <div className="banner-container">
-        <img src={Banner} alt="Banner" className="banner" />
+      <div className="home-artists-section">
+        <h2 className="home-artists-title">Discover Artists</h2>
+        <div className="artist-buttons">
+          <button className={`artist-button ${artistCategory === 'featured' ? 'active' : ''}`} onClick={() => setArtistCategory('featured')}>Featured</button>
+          <button className={`artist-button ${artistCategory === 'popular' ? 'active' : ''}`} onClick={() => setArtistCategory('popular')}>Popular</button>
+          <button className="view-all-button">
+            <UilArrowUpRight className="view-all-icon" />
+            <span className="view-all-text">View All Artists</span>
+          </button>
+        </div>
       </div>
 
-      <div className="featured-works-container">
-        <h2 className="featured-works-title">FEATURED WORKS</h2>
+      <div className="artist-cards-container">
+        {filteredArtists.map(artist => (
+          <ArtistCard key={artist.nickname} artist={artist} />
+        ))}
       </div>
 
       <div className="menu-container">
@@ -105,6 +124,10 @@ const Home = () => {
             Fonts
           </li>
         </ul>
+      </div>
+
+      <div className="featured-works-container">
+        <h2 className="featured-works-title">FEATURED WORKS</h2>
       </div>
 
       <div className="work-cards-container">

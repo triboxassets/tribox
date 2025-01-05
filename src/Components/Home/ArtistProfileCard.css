@@ -1,0 +1,126 @@
+.artist-profile-card {
+  flex: 0 0 500px; /* Fixed width */
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Geomanist', sans-serif;
+  position: relative;
+  overflow: hidden; /* Ensure content does not overflow */
+}
+
+.artist-profile-card-header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.artist-profile-card-header-content .artist-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Updated body layout for left-aligned content */
+.artist-profile-card-body {
+  display: flex;
+}
+
+/* Larger profile image */
+.artist-profile-card-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+/* Full name styling */
+.artist-profile-card-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  color: #000;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Occupation styling */
+.artist-profile-card-position {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Biography aligned to the left, beneath the profile photo */
+.artist-profile-card-bio {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #777;
+  margin: 15px 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+/* Learn more container with left-aligned text and button */
+.learn-more-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px; /* Adds spacing between bio and button */
+  text-align: left; /* Ensures the container content is aligned left */
+}
+
+/* Learn more link styling */
+.learn-more {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #555; /* Slight color change on hover for "Learn More" */
+}
+
+/* Rectangular button with arrow and rounded corners */
+.learn-more-button {
+  background-color: #000;
+  border: none;
+  border-radius: 100px; /* Rounded corners for the rectangle */
+  width: 70px; /* Set to desired width */
+  height: 40px; /* Set to desired height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #333; /* Darker shade on hover */
+}
+
+/* Arrow icon inside the button */
+.learn-more-icon {
+  font-size: 1.2rem;
+  color: #fff;
+}

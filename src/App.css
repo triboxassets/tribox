@@ -1,48 +1,64 @@
-/* Regular weight */
+/* Geomanist fonts */
 @font-face {
-  font-family: 'DINNextLTPro';
-  src: url('../src/Assets/fonts/DINNextLTPro-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-Black.otf') format('opentype');
+  font-weight: 900;
   font-style: normal;
 }
 
-/* Light weight */
 @font-face {
-  font-family: 'DINNextLTPro';
-  src: url('../src/Assets/fonts/DINNextLTPro-Light.ttf') format('truetype');
-  font-weight: 300;  /* Light font weight */
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-Bold.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
 }
 
-/* Medium weight */
 @font-face {
-  font-family: 'DINNextLTPro';
-  src: url('../src/Assets/fonts/DINNextLTPro-Medium.ttf') format('truetype');
-  font-weight: 500;  /* Medium font weight */
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-Book.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
 }
 
-/* Bold weight */
 @font-face {
-  font-family: 'DINNextLTPro';
-  src: url('../src/Assets/fonts/DINNextLTPro-Bold.ttf') format('truetype');
-  font-weight: 700;  /* Bold font weight */
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-ExtraLight.otf') format('opentype');
+  font-weight: 200;
   font-style: normal;
 }
 
-/* Black weight */
 @font-face {
-  font-family: 'DINNextLTPro';
-  src: url('../src/Assets/fonts/DINNextLTPro-Black.ttf') format('truetype');
-  font-weight: 900;  /* Black font weight */
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-Light.otf') format('opentype');
+  font-weight: 300;
   font-style: normal;
 }
 
-/* Ultra Light weight */
 @font-face {
-  font-family: 'DINNextLTPro';
-  src: url('../src/Assets/fonts/DINNextLTPro-UltraLight.ttf') format('truetype');
-  font-weight: 100;  /* Ultra Light font weight */
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('../src/Assets/fonts/Geomanist-Ultra.otf') format('opentype');
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -63,11 +79,10 @@
   font-style: normal;
 }
 
-
 /* Using the font in the App */
 .App {
   text-align: center;
-  font-family: 'DINNextLTPro', sans-serif; /* Default font */
+  font-family: 'Geomanist', sans-serif; /* Default font */
 }
 
 .App-logo {
@@ -76,9 +91,9 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-}
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
@@ -99,9 +114,9 @@
 
 @keyframes App-logo-spin {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
